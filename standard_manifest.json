@@ -1,0 +1,413 @@
+{
+  "schema_version": "simnibs.delivery.manifest.v2",
+  "project_id": "SIMNIBS-TI-EXAMPLE-20260729",
+  "build_id": "SIMNIBS-TI-EXAMPLE-20260729-V1",
+  "payload_sha256": "3215B0EDED49A293024C764B880C4F880D4172D2CA2DDD31ED0849790DCA2D5E",
+  "generated_files": [
+    {
+      "path": "standard_report_data.json",
+      "bytes": 34833,
+      "sha256": "3215B0EDED49A293024C764B880C4F880D4172D2CA2DDD31ED0849790DCA2D5E"
+    },
+    {
+      "path": "report.html",
+      "bytes": 53895,
+      "sha256": "823924C87E46D69BB51C8460D917B239648B14863F4234D51CC5D72F1F4BDB84"
+    },
+    {
+      "path": "publication/figure_captions.md",
+      "bytes": 4503,
+      "sha256": "02F8903495C11C9921032DA67AF9E076CBAC40E6B69DCC7D0C9BB355FBC3BAEA"
+    },
+    {
+      "path": "publication/methods.md",
+      "bytes": 3263,
+      "sha256": "AE7DF272C442A7C7B34851DF4148AEB23FBAFBEA5B1807B896B9F2382E471250"
+    },
+    {
+      "path": "publication/results_text.md",
+      "bytes": 879,
+      "sha256": "EC6CCF6C04456E04AB39F48B62A16574A95D886737FF1DFB1EC651E605B030E4"
+    },
+    {
+      "path": "publication/roi_results.csv",
+      "bytes": 532,
+      "sha256": "03628038A42E254C48020D3619CC68BD89D9B492C4C8C5BA11C8B595BE3590F1"
+    },
+    {
+      "path": "traceability/parameters.json",
+      "bytes": 7069,
+      "sha256": "743093752650763EEE4733EB9A9625C90335989093F5DF533F3CD524BCE0F757"
+    },
+    {
+      "path": "traceability/quality_control.json",
+      "bytes": 3988,
+      "sha256": "18DD1B85B9D7DBCA46B3810812FEEFA3590C7B6BAF6EBBB79052097BFBD27D29"
+    },
+    {
+      "path": "report.pdf",
+      "bytes": 32677111,
+      "sha256": "157B27F2DDC8FB1BA22B0B3AF11ED91A6ABEE02FBDD7A63571EDDCFA4BEFE619"
+    },
+    {
+      "path": "publication_index.json",
+      "bytes": 12240,
+      "sha256": "24CE17DB84B4D6198935F1088D8D2AF674DCDFE53F4F81E15A82DFBD2FA28EC4"
+    }
+  ],
+  "declared_artifacts": [
+    {
+      "path": "tables/simnibs_ti_service_results.xlsx",
+      "label": "结果表（Excel）",
+      "purpose": "ROI 统计、图件索引和计算口径",
+      "delivery_layer": "publication",
+      "bytes": 23374,
+      "sha256": "A62CBA54E100B20570E19AEC712EB40FF5F55F7793AD0A9C67B3031DC87277AD"
+    },
+    {
+      "path": "packages/figure_support_csv.zip",
+      "label": "图表数据",
+      "purpose": "各图对应的数据文件（部分图件为绘制说明；原始电场数据见“数据与复核文件”）",
+      "delivery_layer": "publication",
+      "bytes": 8550,
+      "sha256": "44FD1694E04856983C4EF91784723F51B039318B6C5A9688AB7CD6983D6F5D3C"
+    },
+    {
+      "path": "packages/nifti_fields.zip",
+      "label": "影像格式电场数据",
+      "purpose": "脑内电场与分析区域（影像格式）",
+      "delivery_layer": "trace",
+      "bytes": 52929238,
+      "sha256": "09BAA648A6BFA9417ACE6F52FACF2CBE9891545A68D155D7503F0B7922D87D6C"
+    },
+    {
+      "path": "raw/ti_example_fields.h5",
+      "label": "逐单元电场数据",
+      "purpose": "逐点电场、派生指标与纤维方向数据",
+      "delivery_layer": "trace",
+      "bytes": 183038916,
+      "sha256": "059941D8360B477C0B00E061C1EB88ABA9813D8234D512651162A6E339BCBF06"
+    },
+    {
+      "path": "raw/ti_example_fields.msh",
+      "label": "计算网格数据",
+      "purpose": "基础电场与两种派生指标",
+      "delivery_layer": "trace",
+      "bytes": 754019047,
+      "sha256": "AE98EB51DDDEBE9F4659CB8DE289742C24016DC3A4C8622766F5CF211F8E693D"
+    },
+    {
+      "path": "raw/ti_example_rois.msh",
+      "label": "分析区域网格",
+      "purpose": "靶区、对侧区域和非靶区标签",
+      "delivery_layer": "trace",
+      "bytes": 843249629,
+      "sha256": "A351F5A8EBDFB0A4BD7BDDBDC5C3E2720F47E28B2137008DDC6734298DEA18E4"
+    },
+    {
+      "path": "publication_index.json",
+      "label": "图件与数据索引",
+      "purpose": "图件、图注与图表数据的对应关系",
+      "delivery_layer": "publication",
+      "generated_by_builder": true,
+      "bytes": 12240,
+      "sha256": "24CE17DB84B4D6198935F1088D8D2AF674DCDFE53F4F81E15A82DFBD2FA28EC4"
+    },
+    {
+      "path": "publication/figure_captions.md",
+      "label": "完整图注",
+      "purpose": "按图号整理的中文图题与图注",
+      "delivery_layer": "publication",
+      "generated_by_builder": true,
+      "bytes": 4503,
+      "sha256": "02F8903495C11C9921032DA67AF9E076CBAC40E6B69DCC7D0C9BB355FBC3BAEA"
+    },
+    {
+      "path": "publication/methods.md",
+      "label": "论文方法文本",
+      "purpose": "按方法主题整理、保留来源编号的可编辑文本",
+      "delivery_layer": "publication",
+      "generated_by_builder": true,
+      "bytes": 3263,
+      "sha256": "AE7DF272C442A7C7B34851DF4148AEB23FBAFBEA5B1807B896B9F2382E471250"
+    },
+    {
+      "path": "publication/results_text.md",
+      "label": "论文结果文本",
+      "purpose": "与图件和指标对应的结果段落草稿",
+      "delivery_layer": "publication",
+      "generated_by_builder": true,
+      "bytes": 879,
+      "sha256": "EC6CCF6C04456E04AB39F48B62A16574A95D886737FF1DFB1EC651E605B030E4"
+    },
+    {
+      "path": "publication/roi_results.csv",
+      "label": "ROI 结果 CSV",
+      "purpose": "全部方案、区域和指标的长表",
+      "delivery_layer": "publication",
+      "generated_by_builder": true,
+      "bytes": 532,
+      "sha256": "03628038A42E254C48020D3619CC68BD89D9B492C4C8C5BA11C8B595BE3590F1"
+    },
+    {
+      "path": "traceability/parameters.json",
+      "label": "计算参数记录",
+      "purpose": "软件、模型、电导率与分析方法参数",
+      "delivery_layer": "trace",
+      "generated_by_builder": true,
+      "bytes": 7069,
+      "sha256": "743093752650763EEE4733EB9A9625C90335989093F5DF533F3CD524BCE0F757"
+    },
+    {
+      "path": "traceability/quality_control.json",
+      "label": "质量检查记录",
+      "purpose": "逐项质量检查、依据和未评估内容",
+      "delivery_layer": "trace",
+      "generated_by_builder": true,
+      "bytes": 3988,
+      "sha256": "18DD1B85B9D7DBCA46B3810812FEEFA3590C7B6BAF6EBBB79052097BFBD27D29"
+    },
+    {
+      "path": "standard_manifest.json",
+      "label": "文件清单",
+      "purpose": "报告及文件的大小与校验值",
+      "delivery_layer": "trace",
+      "generated_by_builder": true
+    },
+    {
+      "path": "reproducibility/DATA_AND_CODE_AVAILABILITY.md",
+      "label": "复核说明",
+      "purpose": "数据内容、版本与复核边界",
+      "delivery_layer": "trace",
+      "bytes": 1517,
+      "sha256": "24996A563FBB15CFED7856A737607C781DD710CA838A87B800EF3CF00E3B9392"
+    }
+  ],
+  "files": [
+    {
+      "path": "figures/figure_data/fig01_stimulation_montage.csv",
+      "bytes": 349,
+      "sha256": "805ED234C34A7F494544188B82A2DF944B17E52CEFB69AC58A089E9A6D7F610A"
+    },
+    {
+      "path": "figures/figure_data/fig02_individual_anatomy_hippocampus.csv",
+      "bytes": 140,
+      "sha256": "42B4F4DED229143E4F1D340EECA7301AB23F9F70BEA37B4F57AF961BAAA8DA62"
+    },
+    {
+      "path": "figures/figure_data/fig03_carrier_fields_E1_E2.csv",
+      "bytes": 589,
+      "sha256": "99C10023C7BB666B7455441E2B09D1C9F0850AD623470934D85D70A69552D0DA"
+    },
+    {
+      "path": "figures/figure_data/fig04_TI_1to1_directional_and_TImax.csv",
+      "bytes": 521,
+      "sha256": "519EB4CB64BE2112BF32FC9406EE35B215C49563D299C3347480D5C801725430"
+    },
+    {
+      "path": "figures/figure_data/fig07_surface_hotspot_ti_1to1.csv",
+      "bytes": 659,
+      "sha256": "783FECCA7721FBF30775C53A18D81491414C33D10B3837714C4E672A5FEDDE7A"
+    },
+    {
+      "path": "figures/figure_data/fig08_transparent_brain_ti_1to1.csv",
+      "bytes": 260,
+      "sha256": "BE2C81A824AECE70D318E8088DCFA4AD097C6EF178FDA962E26383518B85EDE5"
+    },
+    {
+      "path": "figures/figure_data/fig09_electrode_topology_current.csv",
+      "bytes": 469,
+      "sha256": "AC68F7241E5894F5E5E95A48D36A2E83E403BE779A178AEAC13DCC12EA6BA927"
+    },
+    {
+      "path": "figures/figure_data/fig10_headmodel_sagittal_ti_1to1.csv",
+      "bytes": 384,
+      "sha256": "010FC001558AE946C08C1C8188CBAC51E5CC5B3DE3BE6A568339DE162E349E6F"
+    },
+    {
+      "path": "figures/pdf/fig01_stimulation_montage.pdf",
+      "bytes": 445496,
+      "sha256": "B91E6F46871CDB2E60CA18ADA5ED61A240224DB03A97377D345441C368850941"
+    },
+    {
+      "path": "figures/pdf/fig02_individual_anatomy_hippocampus.pdf",
+      "bytes": 689941,
+      "sha256": "A1A704B1B1B1F9FF09B558869FD8DEF3218FE39371E0274C9A363A83029531AC"
+    },
+    {
+      "path": "figures/pdf/fig03_carrier_fields_E1_E2.pdf",
+      "bytes": 5785755,
+      "sha256": "437373C509076DCE3FF75DA786355A8A245777E903A3DC5E88E63CB9BDE67527"
+    },
+    {
+      "path": "figures/pdf/fig04_TI_1to1_directional_and_TImax.pdf",
+      "bytes": 4856894,
+      "sha256": "326683A16851209C8DFAD865251FAAEFF01980B49668C12B9295C8E1B3584702"
+    },
+    {
+      "path": "figures/pdf/fig07_surface_hotspot_ti_1to1_pv.pdf",
+      "bytes": 4352698,
+      "sha256": "0273B5822EA3C0601E6BFE6D382D5CB063B8698A4BE9B3C0976849546478C45C"
+    },
+    {
+      "path": "figures/pdf/fig08_transparent_brain_ti_1to1.pdf",
+      "bytes": 822501,
+      "sha256": "E240731481D42645E0DC10209FB0D234E1B8C1F177AA82244EA7E364CF819641"
+    },
+    {
+      "path": "figures/png/fig01_stimulation_montage.png",
+      "bytes": 735323,
+      "sha256": "917F79501B6370D9DB452AE59B637D4DD3F08CEE274DB4314214D99136451318"
+    },
+    {
+      "path": "figures/png/fig02_individual_anatomy_hippocampus.png",
+      "bytes": 628605,
+      "sha256": "217776C08F80885E7BF270894637EBF5C4A51B2436AB6244F8C928E0E60D6FE1"
+    },
+    {
+      "path": "figures/png/fig03_carrier_fields_E1_E2.png",
+      "bytes": 5215879,
+      "sha256": "BCD29D01E96901E0BDA5CC9A7BF7EC604A05A8376E8339D9905D0EBBFB954110"
+    },
+    {
+      "path": "figures/png/fig04_TI_1to1_directional_and_TImax.png",
+      "bytes": 4322627,
+      "sha256": "482D47815B423D6156A948BD99B2A99C95FE5B4EECD768DAF2A06B8121FAE775"
+    },
+    {
+      "path": "figures/png/fig07_surface_hotspot_ti_1to1_pv.png",
+      "bytes": 3926532,
+      "sha256": "2AD94416D3503CE3125F7D63131FE586D691C1C48F2AAED410FD4AD5E41009FB"
+    },
+    {
+      "path": "figures/png/fig08_transparent_brain_ti_1to1.png",
+      "bytes": 6391158,
+      "sha256": "FAEB11E6EB7CCD9DC13934035FC4B3FCBA9925208034F27F44D7051916BC5920"
+    },
+    {
+      "path": "figures/png/fig09_electrode_topology_current.png",
+      "bytes": 574689,
+      "sha256": "1850BBF24A0F296EDE5B91B90F03B09E8BDE749477A5725B56119344F65CF6F3"
+    },
+    {
+      "path": "figures/png/fig10_headmodel_sagittal_ti_1to1.png",
+      "bytes": 625579,
+      "sha256": "FB0C03D4B1A7F5628E30FBB79FB7D46726DA7F8FB6FE4E4D7BB78732802F57A6"
+    },
+    {
+      "path": "figures/svg/fig01_stimulation_montage.svg",
+      "bytes": 780504,
+      "sha256": "9A9CD540500F69C92489F1DF514E65A4DF521D736790265E49EA7C3D65473F8D"
+    },
+    {
+      "path": "figures/svg/fig02_individual_anatomy_hippocampus.svg",
+      "bytes": 806414,
+      "sha256": "9014AA66234496E897FAF66B95C54833157CABF671EE9B7CFB985EC4BEC867B5"
+    },
+    {
+      "path": "figures/svg/fig03_carrier_fields_E1_E2.svg",
+      "bytes": 8595570,
+      "sha256": "1410B7C2D9617C5DA1A065E97D7CED90FB59EC531F0008B1D784920281D0AB6B"
+    },
+    {
+      "path": "figures/svg/fig04_TI_1to1_directional_and_TImax.svg",
+      "bytes": 7167043,
+      "sha256": "6C2F5E3730DC0D501B593EA3912EF40D660193CA2E0EF9761368C49AF908ADD1"
+    },
+    {
+      "path": "figures/svg/fig07_surface_hotspot_ti_1to1_pv.svg",
+      "bytes": 6455931,
+      "sha256": "4D81DD9E8745EFAE4157B860EB617129EB92A836427CB6E1BC57A74A516C0386"
+    },
+    {
+      "path": "figures/svg/fig08_transparent_brain_ti_1to1.svg",
+      "bytes": 1229462,
+      "sha256": "CCD05C3EA2146167B8157E14248632443F84D31E2CAA24B876AEF0617C58AED8"
+    },
+    {
+      "path": "packages/figure_support_csv.zip",
+      "bytes": 8550,
+      "sha256": "44FD1694E04856983C4EF91784723F51B039318B6C5A9688AB7CD6983D6F5D3C"
+    },
+    {
+      "path": "packages/nifti_fields.zip",
+      "bytes": 52929238,
+      "sha256": "09BAA648A6BFA9417ACE6F52FACF2CBE9891545A68D155D7503F0B7922D87D6C"
+    },
+    {
+      "path": "publication/figure_captions.md",
+      "bytes": 4503,
+      "sha256": "02F8903495C11C9921032DA67AF9E076CBAC40E6B69DCC7D0C9BB355FBC3BAEA"
+    },
+    {
+      "path": "publication/methods.md",
+      "bytes": 3263,
+      "sha256": "AE7DF272C442A7C7B34851DF4148AEB23FBAFBEA5B1807B896B9F2382E471250"
+    },
+    {
+      "path": "publication/results_text.md",
+      "bytes": 879,
+      "sha256": "EC6CCF6C04456E04AB39F48B62A16574A95D886737FF1DFB1EC651E605B030E4"
+    },
+    {
+      "path": "publication/roi_results.csv",
+      "bytes": 532,
+      "sha256": "03628038A42E254C48020D3619CC68BD89D9B492C4C8C5BA11C8B595BE3590F1"
+    },
+    {
+      "path": "publication_index.json",
+      "bytes": 12240,
+      "sha256": "24CE17DB84B4D6198935F1088D8D2AF674DCDFE53F4F81E15A82DFBD2FA28EC4"
+    },
+    {
+      "path": "raw/ti_example_fields.h5",
+      "bytes": 183038916,
+      "sha256": "059941D8360B477C0B00E061C1EB88ABA9813D8234D512651162A6E339BCBF06"
+    },
+    {
+      "path": "raw/ti_example_fields.msh",
+      "bytes": 754019047,
+      "sha256": "AE98EB51DDDEBE9F4659CB8DE289742C24016DC3A4C8622766F5CF211F8E693D"
+    },
+    {
+      "path": "raw/ti_example_rois.msh",
+      "bytes": 843249629,
+      "sha256": "A351F5A8EBDFB0A4BD7BDDBDC5C3E2720F47E28B2137008DDC6734298DEA18E4"
+    },
+    {
+      "path": "report.html",
+      "bytes": 53895,
+      "sha256": "823924C87E46D69BB51C8460D917B239648B14863F4234D51CC5D72F1F4BDB84"
+    },
+    {
+      "path": "report.pdf",
+      "bytes": 32677111,
+      "sha256": "157B27F2DDC8FB1BA22B0B3AF11ED91A6ABEE02FBDD7A63571EDDCFA4BEFE619"
+    },
+    {
+      "path": "reproducibility/DATA_AND_CODE_AVAILABILITY.md",
+      "bytes": 1517,
+      "sha256": "24996A563FBB15CFED7856A737607C781DD710CA838A87B800EF3CF00E3B9392"
+    },
+    {
+      "path": "standard_report_data.json",
+      "bytes": 34833,
+      "sha256": "3215B0EDED49A293024C764B880C4F880D4172D2CA2DDD31ED0849790DCA2D5E"
+    },
+    {
+      "path": "tables/simnibs_ti_service_results.xlsx",
+      "bytes": 23374,
+      "sha256": "A62CBA54E100B20570E19AEC712EB40FF5F55F7793AD0A9C67B3031DC87277AD"
+    },
+    {
+      "path": "traceability/parameters.json",
+      "bytes": 7069,
+      "sha256": "743093752650763EEE4733EB9A9625C90335989093F5DF533F3CD524BCE0F757"
+    },
+    {
+      "path": "traceability/quality_control.json",
+      "bytes": 3988,
+      "sha256": "18DD1B85B9D7DBCA46B3810812FEEFA3590C7B6BAF6EBBB79052097BFBD27D29"
+    }
+  ]
+}
