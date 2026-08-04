@@ -1,0 +1,239 @@
+{
+  "schema_version": "simnibs.publication-index.v1",
+  "project_id": "SIMNIBS-TI-EXAMPLE-20260729",
+  "build_id": "SIMNIBS-TI-EXAMPLE-20260729-V1",
+  "figures": [
+    {
+      "number": 1,
+      "figure_id": "stimulation_montage",
+      "category": "protocol",
+      "title": "电极位置与两组回路",
+      "reader_question": "电极放在哪里，两组电流如何配对？",
+      "conclusion": "四枚电极构成 FT7-Fp2 与 TP7-TP8 两路刺激回路。",
+      "caption": "圆形和方形分别代表两路电流的正相端与负相端（极性随交流电快速反转）；连线只表示电极配对关系，不代表电流在脑内的路径。绿色为左海马。",
+      "assets": {
+        "image": {
+          "path": "figures/png/fig01_stimulation_montage.png",
+          "bytes": 735323,
+          "sha256": "917F79501B6370D9DB452AE59B637D4DD3F08CEE274DB4314214D99136451318"
+        },
+        "vector": {
+          "path": "figures/svg/fig01_stimulation_montage.svg",
+          "bytes": 780504,
+          "sha256": "9A9CD540500F69C92489F1DF514E65A4DF521D736790265E49EA7C3D65473F8D"
+        },
+        "pdf": {
+          "path": "figures/pdf/fig01_stimulation_montage.pdf",
+          "bytes": 445496,
+          "sha256": "B91E6F46871CDB2E60CA18ADA5ED61A240224DB03A97377D345441C368850941"
+        },
+        "source_data": {
+          "path": "figures/figure_data/fig01_stimulation_montage.csv",
+          "bytes": 349,
+          "sha256": "805ED234C34A7F494544188B82A2DF944B17E52CEFB69AC58A089E9A6D7F610A"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "figure_id": "electrode_topology",
+      "category": "protocol",
+      "title": "电极配置与电流分配（俯视）",
+      "reader_question": "四个电极如何配对，注入电流的大小与方向如何？",
+      "conclusion": "TI 1:1 时两组回路均为 ±1.0 mA；TI 1:3 时第一组为 ±0.5 mA、第二组为 ±1.5 mA（峰值口径）。",
+      "caption": "头皮俯视图：蓝色表示负相电流、红色表示正相电流，符号大小与电流幅度对应；虚线表示两路载波回路的配对关系。",
+      "assets": {
+        "image": {
+          "path": "figures/png/fig09_electrode_topology_current.png",
+          "bytes": 574689,
+          "sha256": "1850BBF24A0F296EDE5B91B90F03B09E8BDE749477A5725B56119344F65CF6F3"
+        },
+        "vector": null,
+        "pdf": null,
+        "source_data": {
+          "path": "figures/figure_data/fig09_electrode_topology_current.csv",
+          "bytes": 469,
+          "sha256": "AC68F7241E5894F5E5E95A48D36A2E83E403BE779A178AEAC13DCC12EA6BA927"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "figure_id": "anatomy_target",
+      "category": "anatomy",
+      "title": "头模型与左海马靶区",
+      "reader_question": "靶区画在什么位置，是否覆盖预定解剖结构？",
+      "conclusion": "绿色区域为本次分析的左海马区域。",
+      "caption": "矢状位、冠状位与轴位显示左海马区域，用于核对靶区位置、侧别及范围；绿色轮廓为左海马 ROI，黄色虚线标记靶点中心参考线，左下角比例尺为 20 mm；头模型基于公开示例 MRI 构建。",
+      "assets": {
+        "image": {
+          "path": "figures/png/fig02_individual_anatomy_hippocampus.png",
+          "bytes": 628605,
+          "sha256": "217776C08F80885E7BF270894637EBF5C4A51B2436AB6244F8C928E0E60D6FE1"
+        },
+        "vector": {
+          "path": "figures/svg/fig02_individual_anatomy_hippocampus.svg",
+          "bytes": 806414,
+          "sha256": "9014AA66234496E897FAF66B95C54833157CABF671EE9B7CFB985EC4BEC867B5"
+        },
+        "pdf": {
+          "path": "figures/pdf/fig02_individual_anatomy_hippocampus.pdf",
+          "bytes": 689941,
+          "sha256": "A1A704B1B1B1F9FF09B558869FD8DEF3218FE39371E0274C9A363A83029531AC"
+        },
+        "source_data": {
+          "path": "figures/figure_data/fig02_individual_anatomy_hippocampus.csv",
+          "bytes": 140,
+          "sha256": "42B4F4DED229143E4F1D340EECA7301AB23F9F70BEA37B4F57AF961BAAA8DA62"
+        }
+      }
+    },
+    {
+      "number": 4,
+      "figure_id": "carrier_fields",
+      "category": "field",
+      "title": "两组回路各自形成的基础电场",
+      "reader_question": "两组回路分别产生什么空间分布？",
+      "conclusion": "两路电流各自产生的电场分布不同；两路电场在脑内相互叠加，形成 5 Hz 节律的调制电场，其分布和强度由两路电场共同决定。",
+      "caption": "上下两行分别显示两路电流（E1、E2）各自在 1 mA 电流下产生的电场（V/m；色标上限取灰质第 99 百分位，超出按上限颜色显示），每行含矢状位、冠状位与轴位三个切面，三个切面均经过海马靶点中心（黄色十字与圆圈标记靶点）。两路电场的方向和范围不同，是理解调制电场分布的基础；空心标记为电极在切面上的投影位置，实色标记为该行对应的电流回路，淡色为另一回路。",
+      "assets": {
+        "image": {
+          "path": "figures/png/fig03_carrier_fields_E1_E2.png",
+          "bytes": 5215879,
+          "sha256": "BCD29D01E96901E0BDA5CC9A7BF7EC604A05A8376E8339D9905D0EBBFB954110"
+        },
+        "vector": {
+          "path": "figures/svg/fig03_carrier_fields_E1_E2.svg",
+          "bytes": 8595570,
+          "sha256": "1410B7C2D9617C5DA1A065E97D7CED90FB59EC531F0008B1D784920281D0AB6B"
+        },
+        "pdf": {
+          "path": "figures/pdf/fig03_carrier_fields_E1_E2.pdf",
+          "bytes": 5785755,
+          "sha256": "437373C509076DCE3FF75DA786355A8A245777E903A3DC5E88E63CB9BDE67527"
+        },
+        "source_data": {
+          "path": "figures/figure_data/fig03_carrier_fields_E1_E2.csv",
+          "bytes": 589,
+          "sha256": "99C10023C7BB666B7455441E2B09D1C9F0850AD623470934D85D70A69552D0DA"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "figure_id": "ti_1to1_field",
+      "category": "field",
+      "title": "示例方案的全脑电场分布",
+      "reader_question": "本次方案产生的电场集中在哪里？",
+      "conclusion": "左海马电场中位数 0.070 V/m；海马以外区域也有电场。",
+      "caption": "上排显示沿神经纤维走向（DTI 主方向，近似）测量的电场，下排显示不限定方向的电场强度（TImax）。三个切面（矢状/冠状/轴位）均经过海马靶点中心（黄色十字与圆圈标记靶点）；色标上限取灰质第 99 百分位，超出按上限颜色显示；空心标记为电极在切面上的投影位置，实色标记为当前行对应的回路，淡色为另一回路。",
+      "assets": {
+        "image": {
+          "path": "figures/png/fig04_TI_1to1_directional_and_TImax.png",
+          "bytes": 4322627,
+          "sha256": "482D47815B423D6156A948BD99B2A99C95FE5B4EECD768DAF2A06B8121FAE775"
+        },
+        "vector": {
+          "path": "figures/svg/fig04_TI_1to1_directional_and_TImax.svg",
+          "bytes": 7167043,
+          "sha256": "6C2F5E3730DC0D501B593EA3912EF40D660193CA2E0EF9761368C49AF908ADD1"
+        },
+        "pdf": {
+          "path": "figures/pdf/fig04_TI_1to1_directional_and_TImax.pdf",
+          "bytes": 4856894,
+          "sha256": "326683A16851209C8DFAD865251FAAEFF01980B49668C12B9295C8E1B3584702"
+        },
+        "source_data": {
+          "path": "figures/figure_data/fig04_TI_1to1_directional_and_TImax.csv",
+          "bytes": 521,
+          "sha256": "519EB4CB64BE2112BF32FC9406EE35B215C49563D299C3347480D5C801725430"
+        }
+      }
+    },
+    {
+      "number": 6,
+      "figure_id": "surface_hotspot",
+      "category": "field",
+      "title": "皮层表面电场热点分布（多视角）",
+      "reader_question": "本次方案产生的电场在皮层表面集中在哪里？",
+      "conclusion": "TI 1:1 的皮层表面包络电场整体随沟回连续分布；高值热点集中在左侧颅顶区域，与电极回路位置对应，其余皮层以较低场强为主。",
+      "caption": "八个视图（上、下、前、后、左外侧、右外侧、左内侧、右内侧）展示 TI 1:1 条件下皮层表面 TImax 的连续分布。全图共用固定线性色标 [0, 0.300] V/m，超出上限的值按上限颜色显示；正交投影、统一光照，表面按顶点插值着色。",
+      "assets": {
+        "image": {
+          "path": "figures/png/fig07_surface_hotspot_ti_1to1_pv.png",
+          "bytes": 3926532,
+          "sha256": "2AD94416D3503CE3125F7D63131FE586D691C1C48F2AAED410FD4AD5E41009FB"
+        },
+        "vector": {
+          "path": "figures/svg/fig07_surface_hotspot_ti_1to1_pv.svg",
+          "bytes": 6455931,
+          "sha256": "4D81DD9E8745EFAE4157B860EB617129EB92A836427CB6E1BC57A74A516C0386"
+        },
+        "pdf": {
+          "path": "figures/pdf/fig07_surface_hotspot_ti_1to1_pv.pdf",
+          "bytes": 4352698,
+          "sha256": "0273B5822EA3C0601E6BFE6D382D5CB063B8698A4BE9B3C0976849546478C45C"
+        },
+        "source_data": {
+          "path": "figures/figure_data/fig07_surface_hotspot_ti_1to1.csv",
+          "bytes": 659,
+          "sha256": "783FECCA7721FBF30775C53A18D81491414C33D10B3837714C4E672A5FEDDE7A"
+        }
+      }
+    },
+    {
+      "number": 7,
+      "figure_id": "transparent_brain",
+      "category": "field",
+      "title": "透明脑内热点分布",
+      "reader_question": "TI 1:1 在脑内的高值热点集中在哪里？",
+      "conclusion": "超过表面场 P95 的高值热点主要位于左侧颅顶区域，海马靶区附近可见高值集中；其余深部灰质以较低场强为主。",
+      "caption": "半透明脑壳显示解剖轮廓，彩色点为灰质单元中 TImax 超过 P95 的高值热点（按统一色标 [0, 0.300] V/m 着色），洋红色为左海马靶区。",
+      "assets": {
+        "image": {
+          "path": "figures/png/fig08_transparent_brain_ti_1to1.png",
+          "bytes": 6391158,
+          "sha256": "FAEB11E6EB7CCD9DC13934035FC4B3FCBA9925208034F27F44D7051916BC5920"
+        },
+        "vector": {
+          "path": "figures/svg/fig08_transparent_brain_ti_1to1.svg",
+          "bytes": 1229462,
+          "sha256": "CCD05C3EA2146167B8157E14248632443F84D31E2CAA24B876AEF0617C58AED8"
+        },
+        "pdf": {
+          "path": "figures/pdf/fig08_transparent_brain_ti_1to1.pdf",
+          "bytes": 822501,
+          "sha256": "E240731481D42645E0DC10209FB0D234E1B8C1F177AA82244EA7E364CF819641"
+        },
+        "source_data": {
+          "path": "figures/figure_data/fig08_transparent_brain_ti_1to1.csv",
+          "bytes": 260,
+          "sha256": "BE2C81A824AECE70D318E8088DCFA4AD097C6EF178FDA962E26383518B85EDE5"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "figure_id": "headmodel_sagittal",
+      "category": "field",
+      "title": "仿真头模矢状切面电场分布",
+      "reader_question": "电场在真实头模（头皮、颅骨、脑脊液、脑组织）中的分布如何？",
+      "conclusion": "矢状切面经过海马靶点中心（红圈标记）；电场主要集中于灰质区域，靠近靶点的内侧颅叶附近可见高值，头皮与颅骨层电场较弱。",
+      "caption": "采用有限元头模的组织分割切面：头皮、颅骨、脑脊液与白质以半透明解剖色显示，灰质按 TImax 着色（统一色标 [0, 0.300] V/m，电场仅映射于灰质切面）；品红色圆盘为头皮电极投影，白点+红圈为海马靶点。",
+      "assets": {
+        "image": {
+          "path": "figures/png/fig10_headmodel_sagittal_ti_1to1.png",
+          "bytes": 625579,
+          "sha256": "FB0C03D4B1A7F5628E30FBB79FB7D46726DA7F8FB6FE4E4D7BB78732802F57A6"
+        },
+        "vector": null,
+        "pdf": null,
+        "source_data": {
+          "path": "figures/figure_data/fig10_headmodel_sagittal_ti_1to1.csv",
+          "bytes": 384,
+          "sha256": "010FC001558AE946C08C1C8188CBAC51E5CC5B3DE3BE6A568339DE162E349E6F"
+        }
+      }
+    }
+  ]
+}
