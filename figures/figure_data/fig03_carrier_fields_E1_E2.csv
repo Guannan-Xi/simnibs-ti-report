@@ -1,0 +1,3 @@
+metric,description,color_scale_vmin_v_per_m,color_scale_vmax_v_per_m,scale_rule,slice_x_subject_mm,slice_y_subject_mm,slice_z_subject_mm,field_files
+E1,carrier electric field E1,0.0,0.2136823534965515,joint gray-matter P99 of E1 and E2; display clipping only,-23.737457275390625,6.1875,0.35772705078125,"raw/ti_ernie_example_fields.h5; raw/ti_ernie_example_fields.msh"
+E2,carrier electric field E2,0.0,0.2136823534965515,joint gray-matter P99 of E1 and E2; display clipping only,-23.737457275390625,6.1875,0.35772705078125,"raw/ti_ernie_example_fields.h5; raw/ti_ernie_example_fields.msh"
