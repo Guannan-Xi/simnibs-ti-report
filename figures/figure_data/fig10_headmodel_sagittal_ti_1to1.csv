@@ -1,0 +1,9 @@
+parameter,value
+slice_plane,sagittal (x fixed)
+slice_x_mm,-23.401
+target_name,left hippocampus ROI centroid
+target_xyz_mm,"-23.401, 6.096, 0.112"
+coordinate_space,ernie individual conform (subject) space
+field,TImax on gray matter tetrahedra
+color_scale,"linear [0, 0.300] V/m, same LUT as fig05"
+tissues,"scalp, compact/spongy bone, CSF, WM (translucent); GM field-colored"
