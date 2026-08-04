@@ -1,0 +1,8 @@
+parameter,value
+hot_threshold_rule,P95 of positive surface GM TImax
+hot_threshold_V_per_m,0.2108
+hot_tetrahedra,66879
+hot_volume_mm3,34344.9
+hippocampus_volume_mm3,4080.7
+color_scale,"linear [0, 0.300] V/m, same LUT as fig05"
+hippocampus_color,#E040FB
