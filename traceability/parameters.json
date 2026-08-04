@@ -1,0 +1,188 @@
+{
+  "schema_version": "simnibs.parameters.v1",
+  "project_id": "SIMNIBS-TI-EXAMPLE-20260729",
+  "build_id": "SIMNIBS-TI-EXAMPLE-20260729-V1",
+  "analysis_mode": "forward_single",
+  "stimulation_modality": "temporal_interference",
+  "subject": {
+    "subject_id": "example",
+    "display_name": "示例受试者",
+    "model_type": "SimNIBS 单受试者头模型",
+    "data_nature": "示例数据（非客户数据）",
+    "image_source": "MRI 数据来源：[填写]；扫描信息：[填写]；头模型构建与审核：[填写]。"
+  },
+  "protocol": {
+    "amplitude_convention": "peak_to_baseline",
+    "conditions": [
+      {
+        "condition_id": "TI_1to1",
+        "label": "示例方案（TI 1:1）",
+        "channels": [
+          {
+            "channel_id": "E1",
+            "positive": "FT7",
+            "negative": "Fp2",
+            "current_mA": 1.0,
+            "frequency_khz": 2.005,
+            "description": "FT7 正相端(+1.0 mA) / Fp2 负相端(−1.0 mA)，2.005 kHz"
+          },
+          {
+            "channel_id": "E2",
+            "positive": "TP7",
+            "negative": "TP8",
+            "current_mA": 1.0,
+            "frequency_khz": 2.0,
+            "description": "TP7 正相端(+1.0 mA) / TP8 负相端(−1.0 mA)，2.000 kHz"
+          }
+        ]
+      }
+    ]
+  },
+  "targets": [
+    {
+      "target_id": "hippocampus",
+      "name": "左海马",
+      "role": "target",
+      "definition": "Harvard-Oxford 25% 最大概率图谱左海马",
+      "coordinate_space": "MNI / example subject conform"
+    },
+    {
+      "target_id": "right_hippocampus",
+      "name": "右海马",
+      "role": "contralateral",
+      "definition": "Harvard-Oxford 25% 最大概率图谱右海马",
+      "coordinate_space": "MNI / example subject conform"
+    },
+    {
+      "target_id": "cortex_anterior",
+      "name": "前部皮质采样区",
+      "role": "off_target_sample",
+      "definition": "以 FT7 电极邻近灰质单元为中心的 10 mm 球形采样区（个体头模型坐标约 −55.8、33.9、9.1 mm），非解剖图谱分区",
+      "coordinate_space": "subject"
+    },
+    {
+      "target_id": "cortex_middle",
+      "name": "中部皮质采样区",
+      "role": "off_target_sample",
+      "definition": "以 FT7-TP7 头皮坐标中点邻近灰质单元为中心的 10 mm 球形采样区（个体头模型坐标约 −64.2、8.6、2.2 mm），非解剖图谱分区",
+      "coordinate_space": "subject"
+    },
+    {
+      "target_id": "cortex_posterior",
+      "name": "后部皮质采样区",
+      "role": "off_target_sample",
+      "definition": "以 TP7 电极邻近灰质单元为中心的 10 mm 球形采样区（个体头模型坐标约 −63.8、−19.6、8.4 mm），非解剖图谱分区",
+      "coordinate_space": "subject"
+    },
+    {
+      "target_id": "off_target_gray_matter",
+      "name": "全部非靶区灰质",
+      "role": "off_target",
+      "definition": "有效灰质分析域减去左海马靶区",
+      "coordinate_space": "subject"
+    }
+  ],
+  "metric_definitions": {
+    "mean": {
+      "label": "平均值",
+      "unit": "V/m",
+      "definition": "方向投影电场按灰质体积加权的区域平均值（非 TImax）",
+      "decimals": 4
+    },
+    "median": {
+      "label": "中位数",
+      "unit": "V/m",
+      "definition": "方向投影电场按灰质体积加权的区域中位数（非 TImax）",
+      "decimals": 4
+    },
+    "p95": {
+      "label": "P95",
+      "unit": "V/m",
+      "definition": "方向投影电场按灰质体积加权的第 95 百分位数（非 TImax）",
+      "decimals": 4
+    },
+    "timax_mean": {
+      "label": "TImax 平均值",
+      "unit": "V/m",
+      "definition": "不限定方向的包络电场幅度按全部灰质体积加权的区域平均值；不排除缺少纤维方向数据的区域，统计域与方向投影电场不同",
+      "decimals": 4
+    },
+    "timax_median": {
+      "label": "TImax 中位数",
+      "unit": "V/m",
+      "definition": "不限定方向的包络电场幅度按全部灰质体积加权的区域中位数；不排除缺少纤维方向数据的区域，统计域与方向投影电场不同",
+      "decimals": 4
+    },
+    "timax_p95": {
+      "label": "TImax P95",
+      "unit": "V/m",
+      "definition": "不限定方向的包络电场幅度按全部灰质体积加权的第 95 百分位数；不排除缺少纤维方向数据的区域，统计域与方向投影电场不同",
+      "decimals": 4
+    },
+    "volume": {
+      "label": "体积",
+      "unit": "mm³",
+      "definition": "方向投影电场数值有效且体积为正的灰质总体积；缺少纤维方向数据的区域记为缺失并排除，不写为零",
+      "decimals": 1
+    }
+  },
+  "modules": {
+    "temporal_interference": {
+      "primary_metric": "directional_ti",
+      "secondary_metric": "timax",
+      "carrier_frequencies_hz": [
+        2005,
+        2000
+      ],
+      "beat_frequency_hz": 5,
+      "direction_source": "DTI principal eigenvector",
+      "envelope_definition": "SimNIBS get_dirTI and get_maxTI modulation-envelope amplitude",
+      "current_unit": "mA peak-to-baseline",
+      "field_unit": "V/m"
+    }
+  },
+  "reproducibility": {
+    "build_id": "SIMNIBS-TI-EXAMPLE-20260729-V1",
+    "version_label": "示例版 v1.0",
+    "software": {
+      "name": "SimNIBS",
+      "version": "4.6.0",
+      "environment_file": "reproducibility/python_environment.json"
+    },
+    "solver": {
+      "name": "有限元求解器（hypre）",
+      "formulation": "quasistatic finite element solution with linear superposition",
+      "session_file": "raw/fem/simnibs_simulation_20260729-161359.mat",
+      "log_file": "raw/fem/simnibs_simulation_20260729-161359.log"
+    },
+    "head_model": {
+      "subject_id": "example",
+      "pipeline": "SimNIBS 单受试者头模型",
+      "field_mesh": "raw/ti_example_fields.msh",
+      "gray_tetrahedra": 1337567
+    },
+    "conductivities": {
+      "mode": "isotropic",
+      "values_source": "frozen SimNIBS session file",
+      "session_file": "raw/fem/simnibs_simulation_20260729-161359.mat"
+    },
+    "coordinate_transforms": [
+      {
+        "tool": "simnibs.utils.transformations.subject2mni_coords",
+        "direction": "subject2mni",
+        "transformation_type": "nonl",
+        "warp_field": "m2m_ernie/toMNI/Conform2MNI_nonl.nii.gz",
+        "atlas_sampling": "nearest-neighbor labels at transformed gray-matter tetrahedron centers",
+        "atlas_to_subject_resampling": false
+      }
+    ],
+    "analysis_parameters": {
+      "amplitude_convention": "peak_to_baseline",
+      "roi_weighting": "tetrahedron_volume",
+      "primary_metric": "directional_ti",
+      "secondary_metric": "timax",
+      "inferential_statistics": "not_performed",
+      "dti_source": "[填写：DTI 数据来源（是否受试者自身 DWI）与张量处理]"
+    }
+  }
+}
