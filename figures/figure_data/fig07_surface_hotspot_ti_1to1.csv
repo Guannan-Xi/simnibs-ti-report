@@ -1,0 +1,27 @@
+parameter,value
+cmap_node_0.00,#05264F
+cmap_node_0.14,#073762
+cmap_node_0.30,#075078
+cmap_node_0.43,#08747E
+cmap_node_0.56,#268B70
+cmap_node_0.68,#6D994F
+cmap_node_0.79,#A5A13B
+cmap_node_0.90,#C58A30
+cmap_node_1.00,#C94A2D
+vmin_V_per_m,0.000
+vmax_V_per_m,0.300
+mapping,"linear, clamp above vmax"
+ambient,0.68
+diffuse,0.32
+specular,0.0
+background,#FFFFFF
+projection,orthographic
+surface,"gray-matter surface (pial, open at midline)"
+surface_TImax_P0,0.0090
+surface_TImax_P25,0.0625
+surface_TImax_P50,0.0933
+surface_TImax_P75,0.1296
+surface_TImax_P90,0.1731
+surface_TImax_P95,0.2105
+surface_TImax_P99,0.2840
+surface_TImax_P100,0.5205
