@@ -1,0 +1,730 @@
+{
+  "schema_version": "simnibs.delivery.v2",
+  "analysis_mode": "forward_single",
+  "stimulation_modality": "temporal_interference",
+  "project": {
+    "project_id": "SIMNIBS-TI-EXAMPLE-20260729",
+    "title": "海马时间干涉刺激仿真报告",
+    "scientific_question": "本报告评估一种无创脑刺激方案（时间干涉电刺激，TI）在脑内产生的电场分布：左海马靶区获得多强电场、海马以外区域暴露多少，以及结果的质量与限制。",
+    "service_status": "draft"
+  },
+  "subject": {
+    "subject_id": "example",
+    "display_name": "示例受试者",
+    "model_type": "SimNIBS 单受试者头模型",
+    "data_nature": "示例数据（非客户数据）",
+    "image_source": "MRI 数据来源：[填写]；扫描信息：[填写]；头模型构建与审核：[填写]。"
+  },
+  "targets": [
+    {
+      "target_id": "hippocampus",
+      "name": "左海马",
+      "role": "target",
+      "definition": "Harvard-Oxford 25% 最大概率图谱左海马",
+      "coordinate_space": "MNI / example subject conform"
+    },
+    {
+      "target_id": "right_hippocampus",
+      "name": "右海马",
+      "role": "contralateral",
+      "definition": "Harvard-Oxford 25% 最大概率图谱右海马",
+      "coordinate_space": "MNI / example subject conform"
+    },
+    {
+      "target_id": "cortex_anterior",
+      "name": "前部皮质采样区",
+      "role": "off_target_sample",
+      "definition": "以 FT7 电极邻近灰质单元为中心的 10 mm 球形采样区（个体头模型坐标约 −55.8、33.9、9.1 mm），非解剖图谱分区",
+      "coordinate_space": "subject"
+    },
+    {
+      "target_id": "cortex_middle",
+      "name": "中部皮质采样区",
+      "role": "off_target_sample",
+      "definition": "以 FT7-TP7 头皮坐标中点邻近灰质单元为中心的 10 mm 球形采样区（个体头模型坐标约 −64.2、8.6、2.2 mm），非解剖图谱分区",
+      "coordinate_space": "subject"
+    },
+    {
+      "target_id": "cortex_posterior",
+      "name": "后部皮质采样区",
+      "role": "off_target_sample",
+      "definition": "以 TP7 电极邻近灰质单元为中心的 10 mm 球形采样区（个体头模型坐标约 −63.8、−19.6、8.4 mm），非解剖图谱分区",
+      "coordinate_space": "subject"
+    },
+    {
+      "target_id": "off_target_gray_matter",
+      "name": "全部非靶区灰质",
+      "role": "off_target",
+      "definition": "有效灰质分析域减去左海马靶区",
+      "coordinate_space": "subject"
+    }
+  ],
+  "protocol": {
+    "amplitude_convention": "peak_to_baseline",
+    "conditions": [
+      {
+        "condition_id": "TI_1to1",
+        "label": "示例方案（TI 1:1）",
+        "channels": [
+          {
+            "channel_id": "E1",
+            "positive": "FT7",
+            "negative": "Fp2",
+            "current_mA": 1.0,
+            "frequency_khz": 2.005,
+            "description": "FT7 正相端(+1.0 mA) / Fp2 负相端(−1.0 mA)，2.005 kHz"
+          },
+          {
+            "channel_id": "E2",
+            "positive": "TP7",
+            "negative": "TP8",
+            "current_mA": 1.0,
+            "frequency_khz": 2.0,
+            "description": "TP7 正相端(+1.0 mA) / TP8 负相端(−1.0 mA)，2.000 kHz"
+          }
+        ]
+      }
+    ]
+  },
+  "results": {
+    "summary": {
+      "direct_answer": "在示例受试者中，左海马区域的电场强度中位数为 0.070 V/m；海马以外区域也有电场。",
+      "plain_conclusion": "左海马电场中位数 0.070 V/m，较高水平（P95，即区域内较强的电场水平）0.183 V/m；海马以外灰质的 P95 为 0.123 V/m，电极附近的皮质区域 P95 达 0.276 V/m。电场数值只描述电场强弱，不等于神经被激活，也不代表疗效或安全性。",
+      "comparison_status": "not_applicable",
+      "status_label": "示例受试者结果",
+      "rationale": [
+        "左海马电场中位数 0.070 V/m，P95 0.183 V/m。",
+        "非靶区暴露：海马以外灰质 P95 0.123 V/m；电极附近的前部皮质区域 P95 0.276 V/m，高于左海马。"
+      ],
+      "tradeoffs": [
+        "海马以外也有电场，左海马电场较强不等于刺激只作用于海马。",
+        "本报告不评价安全性；电场强度不等于神经被激活，也不代表疗效。"
+      ],
+      "key_metrics": [
+        {
+          "label": "左海马电场（中位数）",
+          "value": "0.070 V/m",
+          "context": "电场强弱不代表疗效"
+        },
+        {
+          "label": "左海马较高电场水平（P95）",
+          "value": "0.183 V/m",
+          "context": "区域内较强的电场水平"
+        },
+        {
+          "label": "海马以外灰质较高电场水平（P95）",
+          "value": "0.123 V/m",
+          "context": "海马以外区域也有电场"
+        }
+      ],
+      "evidence_links": [
+        {
+          "evidence_id": "target-strength",
+          "claim": "左海马方向投影电场中位数 0.070 V/m（P95 0.183 V/m）。",
+          "figure_ids": [
+            "ti_1to1_field"
+          ],
+          "metric_refs": [
+            {
+              "condition_id": "TI_1to1",
+              "target_id": "hippocampus",
+              "metric_id": "median"
+            },
+            {
+              "condition_id": "TI_1to1",
+              "target_id": "hippocampus",
+              "metric_id": "p95"
+            }
+          ]
+        },
+        {
+          "evidence_id": "off-target-exposure",
+          "claim": "海马以外区域存在电场暴露；全部非靶区灰质 P95 0.123 V/m。",
+          "figure_ids": [
+            "carrier_fields"
+          ],
+          "metric_refs": [
+            {
+              "condition_id": "TI_1to1",
+              "target_id": "off_target_gray_matter",
+              "metric_id": "p95"
+            }
+          ]
+        }
+      ],
+      "key_limit": "结果来自单个示例受试者的头模型，未分析参数变化的影响，也没有临床结局数据。"
+    },
+    "headline_findings": [
+      "示例受试者左海马方向投影电场中位数 0.070 V/m（P95 0.183 V/m）。",
+      "非靶区暴露：全部非靶区灰质 P95 0.123 V/m；前部皮层采样区 P95 0.276 V/m。",
+      "电场数值只描述空间剂量，不表示神经激活、疗效或安全剂量。"
+    ],
+    "interpretation": [
+      "数值没有误差范围（未分析网格精度和参数变化的影响）。",
+      "本报告未评估电场与神经激活之间的关系（如激活阈值、神经元方向）。"
+    ],
+    "interpretation_boundary": "结果仅适用于该受试者的头模型、本次电极位置和计算设置。",
+    "section_summaries": {
+      "field": "左海马电场中位数 0.070 V/m（P95 0.183 V/m），空间分布见图 4–图 8，海马以外区域的数值见区域统计表。",
+      "target": "左海马中位数 0.070 V/m、P95 0.183 V/m；海马以外灰质 P95 0.123 V/m；电极附近的前部皮质采样区 P95 为 0.276 V/m，高于左海马。",
+      "interpretation": "结果只描述电场在脑内的分布，不能推断神经激活、疗效或安全性。"
+    },
+    "metric_definitions": {
+      "mean": {
+        "label": "平均值",
+        "unit": "V/m",
+        "definition": "方向投影电场按灰质体积加权的区域平均值（非 TImax）",
+        "decimals": 4
+      },
+      "median": {
+        "label": "中位数",
+        "unit": "V/m",
+        "definition": "方向投影电场按灰质体积加权的区域中位数（非 TImax）",
+        "decimals": 4
+      },
+      "p95": {
+        "label": "P95",
+        "unit": "V/m",
+        "definition": "方向投影电场按灰质体积加权的第 95 百分位数（非 TImax）",
+        "decimals": 4
+      },
+      "timax_mean": {
+        "label": "TImax 平均值",
+        "unit": "V/m",
+        "definition": "不限定方向的包络电场幅度按全部灰质体积加权的区域平均值；不排除缺少纤维方向数据的区域，统计域与方向投影电场不同",
+        "decimals": 4
+      },
+      "timax_median": {
+        "label": "TImax 中位数",
+        "unit": "V/m",
+        "definition": "不限定方向的包络电场幅度按全部灰质体积加权的区域中位数；不排除缺少纤维方向数据的区域，统计域与方向投影电场不同",
+        "decimals": 4
+      },
+      "timax_p95": {
+        "label": "TImax P95",
+        "unit": "V/m",
+        "definition": "不限定方向的包络电场幅度按全部灰质体积加权的第 95 百分位数；不排除缺少纤维方向数据的区域，统计域与方向投影电场不同",
+        "decimals": 4
+      },
+      "volume": {
+        "label": "体积",
+        "unit": "mm³",
+        "definition": "方向投影电场数值有效且体积为正的灰质总体积；缺少纤维方向数据的区域记为缺失并排除，不写为零",
+        "decimals": 1
+      }
+    },
+    "roi_metrics": [
+      {
+        "condition_id": "TI_1to1",
+        "target_id": "hippocampus",
+        "values": {
+          "mean": 0.0796,
+          "median": 0.0697,
+          "p95": 0.183,
+          "timax_mean": 0.194,
+          "timax_median": 0.1995,
+          "timax_p95": 0.2415,
+          "volume": 4077.2
+        }
+      },
+      {
+        "condition_id": "TI_1to1",
+        "target_id": "right_hippocampus",
+        "values": {
+          "mean": 0.0512,
+          "median": 0.0406,
+          "p95": 0.1332,
+          "timax_mean": 0.1402,
+          "timax_median": 0.1453,
+          "timax_p95": 0.1709,
+          "volume": 4275.5
+        }
+      },
+      {
+        "condition_id": "TI_1to1",
+        "target_id": "cortex_anterior",
+        "values": {
+          "mean": 0.0895,
+          "median": 0.0556,
+          "p95": 0.2755,
+          "timax_mean": 0.2599,
+          "timax_median": 0.2647,
+          "timax_p95": 0.3293,
+          "volume": 1199.9
+        }
+      },
+      {
+        "condition_id": "TI_1to1",
+        "target_id": "cortex_middle",
+        "values": {
+          "mean": 0.0784,
+          "median": 0.0666,
+          "p95": 0.1931,
+          "timax_mean": 0.2231,
+          "timax_median": 0.2111,
+          "timax_p95": 0.3094,
+          "volume": 1284.3
+        }
+      },
+      {
+        "condition_id": "TI_1to1",
+        "target_id": "cortex_posterior",
+        "values": {
+          "mean": 0.0735,
+          "median": 0.0737,
+          "p95": 0.1375,
+          "timax_mean": 0.1551,
+          "timax_median": 0.1529,
+          "timax_p95": 0.1886,
+          "volume": 1385.2
+        }
+      },
+      {
+        "condition_id": "TI_1to1",
+        "target_id": "off_target_gray_matter",
+        "values": {
+          "mean": 0.0501,
+          "median": 0.0445,
+          "p95": 0.1232,
+          "timax_mean": 0.1096,
+          "timax_median": 0.1009,
+          "timax_p95": 0.2075,
+          "volume": 715577.8
+        }
+      }
+    ],
+    "comparisons": {
+      "target_to_offtarget_median": {
+        "TI_1to1": 1.567,
+        "TI_1to3": 1.454
+      }
+    }
+  },
+  "quality_control": {
+    "overall_status": "warning",
+    "summary": "已核对：两路电流的计算使用同一个脑模型，电场指标用独立程序重新计算，结果一致。需注意：按单元数计 10,425 个灰质单元（0.78%）缺少可靠的纤维走向数据（DTI），按体积计约 3644.9 mm³（0.50%），均已从沿纤维方向的电场统计中排除；脑组织电学特性按均匀（各向同性）处理。由于未核对网格精度、MRI 来源与扫描参数、脑组织分割与人工审核、电极建模、靶区定位、DTI 来源及个体差异，且缺乏临床验证，本结果仅用于描述电场分布，不能作为临床决策依据。",
+    "checks": [
+      {
+        "name": "MRI 来源与扫描信息",
+        "status": "not_assessed",
+        "evidence": "[填写 MRI 来源、序列与扫描参数]"
+      },
+      {
+        "name": "DTI 数据来源与张量处理",
+        "status": "not_assessed",
+        "evidence": "[填写 DTI 来源（是否受试者自身 DWI）、采集参数、张量拟合与主方向提取方法]"
+      },
+      {
+        "name": "脑组织分割与模型人工审核",
+        "status": "not_assessed",
+        "evidence": "[填写审核人、日期和结论]"
+      },
+      {
+        "name": "电极位置与接触建模",
+        "status": "not_assessed",
+        "evidence": "[填写电极定位方法、接触几何与模型附着检查]"
+      },
+      {
+        "name": "网格精度（收敛性）",
+        "status": "not_assessed",
+        "evidence": "[填写网格收敛分析或分辨率研究结果]"
+      },
+      {
+        "name": "组织电导率取值（各向同性假设）",
+        "status": "warning",
+        "evidence": "按各向同性取值，数值来自计算会话记录；各向异性与电导率不确定性未评估"
+      },
+      {
+        "name": "靶区图谱定位与配准",
+        "status": "not_assessed",
+        "evidence": "[填写配准工具、目视检查与边界核对记录]"
+      },
+      {
+        "name": "计算网格一致性（结构自检）",
+        "status": "pass",
+        "evidence": "两次载波计算使用同一套脑模型网格，节点和单元逐项一致；该自检不验证网格精度（收敛性）"
+      },
+      {
+        "name": "电场指标公式复算",
+        "status": "pass",
+        "evidence": "该方案的方向投影 TI 与 TImax 使用独立实现的公式逐点复算，与计算软件输出最大绝对误差小于 1×10⁻¹² V/m（容差内完全一致）；该检查验证公式一致性，不验证有限元数值精度"
+      },
+      {
+        "name": "纤维方向数据覆盖",
+        "status": "warning",
+        "evidence": "按单元数计，有效方向向量覆盖 99.22% 灰质单元（未覆盖 0.78%）；无有效方向向量的 10,425 个单元按体积约占灰质总体积 0.50%（体积基数与单元数基数不同，两个百分比不直接相加）。这些单元从方向投影 TI 统计中排除，记为缺失，不写为零；方向可靠性未单独评估"
+      },
+      {
+        "name": "跨受试者稳健性",
+        "status": "not_assessed",
+        "evidence": "当前仅包含一个示例受试者"
+      }
+    ],
+    "limitations": [
+      "MRI 来源、扫描参数及分割人工审核记录未填写。",
+      "未进行网格收敛分析。",
+      "未进行电极位置扰动和组织电导率敏感性分析。",
+      "沿纤维方向的电场以 DTI 主方向为参考轴，但计算时脑组织电学特性按均匀处理，未评估不均匀性（各向异性）的影响。",
+      "灰质纤维方向性通常较弱，DTI 主方向只是粗略参考，不代表已证实的神经元方向；更换参考方向会改变全部数值。",
+      "未量化 DTI 方向和 MNI 配准的不确定性。",
+      "未纳入受试者队列、组水平统计或临床结局数据。"
+    ]
+  },
+  "methods": [
+    {
+      "method_id": "imaging-head-model",
+      "title": "影像与头模型",
+      "text": "MRI 数据来源：[填写]；扫描序列与参数：[填写]；头模型建立方法：[填写]；分割与网格审核：[填写]；DTI 数据来源与张量处理：[填写，是否受试者自身 DWI、采集参数、张量拟合与主方向提取方法]。",
+      "source_ids": [
+        "simnibs-charm"
+      ]
+    },
+    {
+      "method_id": "finite-element-solution",
+      "title": "有限元计算",
+      "text": "采用 SimNIBS 4.6.0 有限元求解器（hypre），灰质分析含 1,337,567 个四面体。电导率按各向同性取值（白质 0.126、灰质 0.275、脑脊液 1.654、颅骨 0.010、头皮 0.465 S/m，来自 SimNIBS 会话文件；完整列表见参数记录），未纳入各向异性。",
+      "source_ids": [
+        "simnibs-methods"
+      ]
+    },
+    {
+      "method_id": "roi-definition",
+      "title": "海马定义",
+      "text": "灰质单元中心变换至 MNI 标准空间后，以最近邻法采样 Harvard-Oxford 25% 最大概率图谱，定义左、右海马 ROI。",
+      "source_ids": [
+        "simnibs-methods",
+        "violante-2023"
+      ]
+    },
+    {
+      "method_id": "ti-field-metrics",
+      "title": "TI 指标",
+      "text": "两路载波 2.005 kHz 与 2.000 kHz 相差 5 Hz，叠加形成 5 Hz 低频包络。方向投影 TI 为电场沿纤维走向（DTI 主方向，几何近似）的包络分量，通常低于方向无关的 TImax；更换投影轴将改变全部数值。主要指标为方向投影 TI，TImax 作为补充；两者均为调制包络幅度，非神经激活阈值。",
+      "source_ids": [
+        "grossman-2017",
+        "simnibs-methods"
+      ]
+    },
+    {
+      "method_id": "roi-statistics",
+      "title": "区域统计",
+      "text": "方向投影 TI 统计仅保留数值有效且体积为正的灰质单元；缺乏 DTI 方向的单元（10,425 个，约 3644.9 mm³）被排除并记为缺失。TImax 不依赖纤维方向，统计域包含全部灰质，故与方向投影 TI 的体积略有差异，表中“体积”列属方向投影 TI 有效域。均值、中位数与 P95 均按灰质体积加权；P99 高值区仅描述空间位置，非激活阈值。",
+      "source_ids": [
+        "tms-efield-review"
+      ]
+    },
+    {
+      "method_id": "independent-verification",
+      "title": "软件与复算",
+      "text": "SimNIBS 4.6.0。方向投影 TI 与 TImax 用独立实现的公式逐单元复算，与 SimNIBS 输出最大绝对误差小于 1×10⁻¹² V/m（容差内一致）。该检查只验证公式一致性，不验证网格收敛；依赖版本与文件校验值见复核文件。",
+      "source_ids": [
+        "simnibs-methods"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "reference_id": "simnibs-methods",
+      "citation": "Saturnino GB et al. SimNIBS 2.1: A comprehensive pipeline for individualized electric field modelling for transcranial brain stimulation. In: Brain and Human Body Modeling. 2019.",
+      "role": "method_basis",
+      "url": "https://doi.org/10.1007/978-3-030-21293-3_1"
+    },
+    {
+      "reference_id": "simnibs-charm",
+      "citation": "Puonti O et al. Accurate and robust whole-head segmentation from magnetic resonance images for individualized head modeling. NeuroImage. 2020;219:117044.",
+      "role": "method_basis",
+      "url": "https://doi.org/10.1016/j.neuroimage.2020.117044"
+    },
+    {
+      "reference_id": "grossman-2017",
+      "citation": "Grossman N et al. Noninvasive deep brain stimulation via temporally interfering electric fields. Cell. 2017;169:1029-1041.e16.",
+      "role": "metric_definition",
+      "url": "https://doi.org/10.1016/j.cell.2017.05.024"
+    },
+    {
+      "reference_id": "violante-2023",
+      "citation": "Violante IR et al. Non-invasive temporal interference electrical stimulation of the human hippocampus. Nature Neuroscience. 2023;26:1994-2004.",
+      "role": "figure_requirements",
+      "url": "https://doi.org/10.1038/s41593-023-01456-8"
+    },
+    {
+      "reference_id": "tms-efield-review",
+      "citation": "Dannhauer M, Gomez LJ, Robins PL, et al. Electric field modeling in personalizing TMS interventions. Biological Psychiatry. 2024;95:494-501.",
+      "role": "reporting_guidance",
+      "url": "https://doi.org/10.1016/j.biopsych.2023.11.022"
+    }
+  ],
+  "reproducibility": {
+    "build_id": "SIMNIBS-TI-EXAMPLE-20260729-V1",
+    "version_label": "示例版 v1.0",
+    "software": {
+      "name": "SimNIBS",
+      "version": "4.6.0",
+      "environment_file": "reproducibility/python_environment.json"
+    },
+    "solver": {
+      "name": "有限元求解器（hypre）",
+      "formulation": "quasistatic finite element solution with linear superposition",
+      "session_file": "raw/fem/simnibs_simulation_20260729-161359.mat",
+      "log_file": "raw/fem/simnibs_simulation_20260729-161359.log"
+    },
+    "head_model": {
+      "subject_id": "example",
+      "pipeline": "SimNIBS 单受试者头模型",
+      "field_mesh": "raw/ti_example_fields.msh",
+      "gray_tetrahedra": 1337567
+    },
+    "conductivities": {
+      "mode": "isotropic",
+      "values_source": "frozen SimNIBS session file",
+      "session_file": "raw/fem/simnibs_simulation_20260729-161359.mat"
+    },
+    "coordinate_transforms": [
+      {
+        "tool": "simnibs.utils.transformations.subject2mni_coords",
+        "direction": "subject2mni",
+        "transformation_type": "nonl",
+        "warp_field": "m2m_ernie/toMNI/Conform2MNI_nonl.nii.gz",
+        "atlas_sampling": "nearest-neighbor labels at transformed gray-matter tetrahedron centers",
+        "atlas_to_subject_resampling": false
+      }
+    ],
+    "analysis_parameters": {
+      "amplitude_convention": "peak_to_baseline",
+      "roi_weighting": "tetrahedron_volume",
+      "primary_metric": "directional_ti",
+      "secondary_metric": "timax",
+      "inferential_statistics": "not_performed",
+      "dti_source": "[填写：DTI 数据来源（是否受试者自身 DWI）与张量处理]"
+    }
+  },
+  "figures": [
+    {
+      "figure_id": "anatomy_target",
+      "category": "anatomy",
+      "title": "头模型与左海马靶区",
+      "reader_question": "靶区画在什么位置，是否覆盖预定解剖结构？",
+      "conclusion": "绿色区域为本次分析的左海马区域。",
+      "caption": "矢状位、冠状位与轴位显示左海马区域，用于核对靶区位置、侧别及范围；绿色轮廓为左海马 ROI，黄色虚线标记靶点中心参考线，左下角比例尺为 20 mm；头模型基于公开示例 MRI 构建。",
+      "method_note": "左海马 ROI 取自 Harvard-Oxford 25% 最大概率图谱；灰质单元中心变换至 MNI 空间后，以最近邻法采样图谱标签。解剖影像与分析区域的影像数据见本报告附件。",
+      "image": "figures/png/fig02_individual_anatomy_hippocampus.png",
+      "vector": "figures/svg/fig02_individual_anatomy_hippocampus.svg",
+      "pdf": "figures/pdf/fig02_individual_anatomy_hippocampus.pdf",
+      "source_data": "figures/figure_data/fig02_individual_anatomy_hippocampus.csv",
+      "data_label": "绘图渲染参数（非源数据）"
+    },
+    {
+      "figure_id": "stimulation_montage",
+      "category": "protocol",
+      "title": "电极位置与两组回路",
+      "reader_question": "电极放在哪里，两组电流如何配对？",
+      "conclusion": "四枚电极构成 FT7-Fp2 与 TP7-TP8 两路刺激回路。",
+      "caption": "圆形和方形分别代表两路电流的正相端与负相端（极性随交流电快速反转）；连线只表示电极配对关系，不代表电流在脑内的路径。绿色为左海马。",
+      "method_note": "电极直径 20 mm，位置按国际 10-10 系统命名。头模型基于公开示例 MRI 构建，原始影像不在本报告附件内。",
+      "image": "figures/png/fig01_stimulation_montage.png",
+      "vector": "figures/svg/fig01_stimulation_montage.svg",
+      "pdf": "figures/pdf/fig01_stimulation_montage.pdf",
+      "source_data": "figures/figure_data/fig01_stimulation_montage.csv",
+      "data_label": "电极坐标数据"
+    },
+    {
+      "figure_id": "electrode_topology",
+      "category": "protocol",
+      "title": "电极配置与电流分配（俯视）",
+      "reader_question": "四个电极如何配对，注入电流的大小与方向如何？",
+      "conclusion": "TI 1:1 时两组回路均为 ±1.0 mA；TI 1:3 时第一组为 ±0.5 mA、第二组为 ±1.5 mA（峰值口径）。",
+      "caption": "头皮俯视图：蓝色表示负相电流、红色表示正相电流，符号大小与电流幅度对应；虚线表示两路载波回路的配对关系。",
+      "method_note": "电流符号沿用本报告峰值口径（peak-to-baseline），+/- 表示交流相位关系而非直流极性。",
+      "image": "figures/png/fig09_electrode_topology_current.png",
+      "vector": null,
+      "pdf": null,
+      "source_data": "figures/figure_data/fig09_electrode_topology_current.csv",
+      "data_label": ""
+    },
+    {
+      "figure_id": "carrier_fields",
+      "category": "field",
+      "title": "两组回路各自形成的基础电场",
+      "reader_question": "两组回路分别产生什么空间分布？",
+      "conclusion": "两路电流各自产生的电场分布不同；两路电场在脑内相互叠加，形成 5 Hz 节律的调制电场，其分布和强度由两路电场共同决定。",
+      "caption": "上下两行分别显示两路电流（E1、E2）各自在 1 mA 电流下产生的电场（V/m；色标上限取灰质第 99 百分位，超出按上限颜色显示），每行含矢状位、冠状位与轴位三个切面，三个切面均经过海马靶点中心（黄色十字与圆圈标记靶点）。两路电场的方向和范围不同，是理解调制电场分布的基础；空心标记为电极在切面上的投影位置，实色标记为该行对应的电流回路，淡色为另一回路。",
+      "method_note": "逐单元电场数据与影像格式电场数据见本报告附件。",
+      "image": "figures/png/fig03_carrier_fields_E1_E2.png",
+      "vector": "figures/svg/fig03_carrier_fields_E1_E2.svg",
+      "pdf": "figures/pdf/fig03_carrier_fields_E1_E2.pdf",
+      "source_data": "figures/figure_data/fig03_carrier_fields_E1_E2.csv",
+      "data_label": "绘图渲染参数（非源数据）"
+    },
+    {
+      "figure_id": "ti_1to1_field",
+      "category": "field",
+      "title": "示例方案的全脑电场分布",
+      "reader_question": "本次方案产生的电场集中在哪里？",
+      "conclusion": "左海马电场中位数 0.070 V/m；海马以外区域也有电场。",
+      "caption": "上排显示沿神经纤维走向（DTI 主方向，近似）测量的电场，下排显示不限定方向的电场强度（TImax）。三个切面（矢状/冠状/轴位）均经过海马靶点中心（黄色十字与圆圈标记靶点）；色标上限取灰质第 99 百分位，超出按上限颜色显示；空心标记为电极在切面上的投影位置，实色标记为当前行对应的回路，淡色为另一回路。",
+      "method_note": "主要指标为方向投影 TI，TImax 作为方向无关的补充指标。逐单元电场数据与影像格式电场数据见本报告附件。",
+      "image": "figures/png/fig04_TI_1to1_directional_and_TImax.png",
+      "vector": "figures/svg/fig04_TI_1to1_directional_and_TImax.svg",
+      "pdf": "figures/pdf/fig04_TI_1to1_directional_and_TImax.pdf",
+      "source_data": "figures/figure_data/fig04_TI_1to1_directional_and_TImax.csv",
+      "data_label": "绘图渲染参数（非源数据）"
+    },
+    {
+      "figure_id": "surface_hotspot",
+      "category": "field",
+      "title": "皮层表面电场热点分布（多视角）",
+      "reader_question": "本次方案产生的电场在皮层表面集中在哪里？",
+      "conclusion": "TI 1:1 的皮层表面包络电场整体随沟回连续分布；高值热点集中在左侧颅顶区域，与电极回路位置对应，其余皮层以较低场强为主。",
+      "caption": "八个视图（上、下、前、后、左外侧、右外侧、左内侧、右内侧）展示 TI 1:1 条件下皮层表面 TImax 的连续分布。全图共用固定线性色标 [0, 0.300] V/m，超出上限的值按上限颜色显示；正交投影、统一光照，表面按顶点插值着色。",
+      "method_note": "皮层表面取自 SimNIBS 灰质表面网格（该网格在中线区域存在开口，内侧视图以矢状切面形式表达）；A–H 依次为上/下/前/后/左外侧/右外侧/左内侧/右内侧。色标与光照参数见支撑 CSV。",
+      "image": "figures/png/fig07_surface_hotspot_ti_1to1_pv.png",
+      "vector": "figures/svg/fig07_surface_hotspot_ti_1to1_pv.svg",
+      "pdf": "figures/pdf/fig07_surface_hotspot_ti_1to1_pv.pdf",
+      "source_data": "figures/figure_data/fig07_surface_hotspot_ti_1to1.csv",
+      "data_label": "色标与分布参数"
+    },
+    {
+      "figure_id": "transparent_brain",
+      "category": "field",
+      "title": "透明脑内热点分布",
+      "reader_question": "TI 1:1 在脑内的高值热点集中在哪里？",
+      "conclusion": "超过表面场 P95 的高值热点主要位于左侧颅顶区域，海马靶区附近可见高值集中；其余深部灰质以较低场强为主。",
+      "caption": "半透明脑壳显示解剖轮廓，彩色点为灰质单元中 TImax 超过 P95 的高值热点（按统一色标 [0, 0.300] V/m 着色），洋红色为左海马靶区。",
+      "method_note": "热点为逐灰质单元显示，不代表激活范围；透明脑壳来自皮层表面网格，内部热点按单元中心绘制。",
+      "image": "figures/png/fig08_transparent_brain_ti_1to1.png",
+      "vector": "figures/svg/fig08_transparent_brain_ti_1to1.svg",
+      "pdf": "figures/pdf/fig08_transparent_brain_ti_1to1.pdf",
+      "source_data": "figures/figure_data/fig08_transparent_brain_ti_1to1.csv",
+      "data_label": ""
+    },
+    {
+      "figure_id": "headmodel_sagittal",
+      "category": "field",
+      "title": "仿真头模矢状切面电场分布",
+      "reader_question": "电场在真实头模（头皮、颅骨、脑脊液、脑组织）中的分布如何？",
+      "conclusion": "矢状切面经过海马靶点中心（红圈标记）；电场主要集中于灰质区域，靠近靶点的内侧颅叶附近可见高值，头皮与颅骨层电场较弱。",
+      "caption": "采用有限元头模的组织分割切面：头皮、颅骨、脑脊液与白质以半透明解剖色显示，灰质按 TImax 着色（统一色标 [0, 0.300] V/m，电场仅映射于灰质切面）；品红色圆盘为头皮电极投影，白点+红圈为海马靶点。",
+      "method_note": "电场仅映射于灰质四面体，白质/脑脊液等为解剖底图；切面位于个体空间 x = 海马靶点中心坐标。组织配色：头皮=棕褐，颅骨=浅灰，脑脊液=浅蓝，白质=灰褐，灰质=电场伪彩（见右侧色标）。",
+      "image": "figures/png/fig10_headmodel_sagittal_ti_1to1.png",
+      "vector": null,
+      "pdf": null,
+      "source_data": "figures/figure_data/fig10_headmodel_sagittal_ti_1to1.csv",
+      "data_label": "切面与靶点参数"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "tables/simnibs_ti_service_results.xlsx",
+      "label": "结果表（Excel）",
+      "purpose": "ROI 统计、图件索引和计算口径",
+      "delivery_layer": "publication"
+    },
+    {
+      "path": "packages/figure_support_csv.zip",
+      "label": "图表数据",
+      "purpose": "各图对应的数据文件（部分图件为绘制说明；原始电场数据见“数据与复核文件”）",
+      "delivery_layer": "publication"
+    },
+    {
+      "path": "packages/nifti_fields.zip",
+      "label": "影像格式电场数据",
+      "purpose": "脑内电场与分析区域（影像格式）",
+      "delivery_layer": "trace"
+    },
+    {
+      "path": "raw/ti_example_fields.h5",
+      "label": "逐单元电场数据",
+      "purpose": "逐点电场、派生指标与纤维方向数据",
+      "delivery_layer": "trace"
+    },
+    {
+      "path": "raw/ti_example_fields.msh",
+      "label": "计算网格数据",
+      "purpose": "基础电场与两种派生指标",
+      "delivery_layer": "trace"
+    },
+    {
+      "path": "raw/ti_example_rois.msh",
+      "label": "分析区域网格",
+      "purpose": "靶区、对侧区域和非靶区标签",
+      "delivery_layer": "trace"
+    },
+    {
+      "path": "publication_index.json",
+      "label": "图件与数据索引",
+      "purpose": "图件、图注与图表数据的对应关系",
+      "delivery_layer": "publication",
+      "generated_by_builder": true
+    },
+    {
+      "path": "publication/figure_captions.md",
+      "label": "完整图注",
+      "purpose": "按图号整理的中文图题与图注",
+      "delivery_layer": "publication",
+      "generated_by_builder": true
+    },
+    {
+      "path": "publication/methods.md",
+      "label": "论文方法文本",
+      "purpose": "按方法主题整理、保留来源编号的可编辑文本",
+      "delivery_layer": "publication",
+      "generated_by_builder": true
+    },
+    {
+      "path": "publication/results_text.md",
+      "label": "论文结果文本",
+      "purpose": "与图件和指标对应的结果段落草稿",
+      "delivery_layer": "publication",
+      "generated_by_builder": true
+    },
+    {
+      "path": "publication/roi_results.csv",
+      "label": "ROI 结果 CSV",
+      "purpose": "全部方案、区域和指标的长表",
+      "delivery_layer": "publication",
+      "generated_by_builder": true
+    },
+    {
+      "path": "traceability/parameters.json",
+      "label": "计算参数记录",
+      "purpose": "软件、模型、电导率与分析方法参数",
+      "delivery_layer": "trace",
+      "generated_by_builder": true
+    },
+    {
+      "path": "traceability/quality_control.json",
+      "label": "质量检查记录",
+      "purpose": "逐项质量检查、依据和未评估内容",
+      "delivery_layer": "trace",
+      "generated_by_builder": true
+    },
+    {
+      "path": "standard_manifest.json",
+      "label": "文件清单",
+      "purpose": "报告及文件的大小与校验值",
+      "delivery_layer": "trace",
+      "generated_by_builder": true
+    },
+    {
+      "path": "reproducibility/DATA_AND_CODE_AVAILABILITY.md",
+      "label": "复核说明",
+      "purpose": "数据内容、版本与复核边界",
+      "delivery_layer": "trace"
+    }
+  ],
+  "modules": {
+    "temporal_interference": {
+      "primary_metric": "directional_ti",
+      "secondary_metric": "timax",
+      "carrier_frequencies_hz": [
+        2005,
+        2000
+      ],
+      "beat_frequency_hz": 5,
+      "direction_source": "DTI principal eigenvector",
+      "envelope_definition": "SimNIBS get_dirTI and get_maxTI modulation-envelope amplitude",
+      "current_unit": "mA peak-to-baseline",
+      "field_unit": "V/m"
+    }
+  }
+}
