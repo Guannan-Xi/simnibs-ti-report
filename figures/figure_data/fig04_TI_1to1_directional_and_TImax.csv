@@ -1,0 +1,3 @@
+metric,color_scale_vmin_v_per_m,color_scale_vmax_v_per_m,scale_rule,slice_x_subject_mm,slice_y_subject_mm,slice_z_subject_mm,field_files
+TI_directional,0.0,0.1635899841785431,joint GM P99 across TI 1:1 and TI 1:3 for this metric,-23.737457275390625,6.1875,0.35772705078125,"raw/ti_ernie_example_fields.h5; packages/nifti_fields.zip"
+TImax,0.0,0.25801682472229004,joint GM P99 across TI 1:1 and TI 1:3 for this metric,-23.737457275390625,6.1875,0.35772705078125,"raw/ti_ernie_example_fields.h5; packages/nifti_fields.zip"
