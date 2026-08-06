@@ -2,57 +2,57 @@
   "schema_version": "simnibs.delivery.manifest.v2",
   "project_id": "SIMNIBS-TI-EXAMPLE-20260729",
   "build_id": "SIMNIBS-TI-EXAMPLE-20260729-V1",
-  "payload_sha256": "3215B0EDED49A293024C764B880C4F880D4172D2CA2DDD31ED0849790DCA2D5E",
+  "payload_sha256": "3C4D97E97644AD31ECA61BE8BAC14FBA2C256486D667D3313210706E9D200C31",
   "generated_files": [
     {
       "path": "standard_report_data.json",
-      "bytes": 34833,
-      "sha256": "3215B0EDED49A293024C764B880C4F880D4172D2CA2DDD31ED0849790DCA2D5E"
+      "bytes": 36077,
+      "sha256": "3C4D97E97644AD31ECA61BE8BAC14FBA2C256486D667D3313210706E9D200C31"
     },
     {
       "path": "report.html",
-      "bytes": 53895,
-      "sha256": "823924C87E46D69BB51C8460D917B239648B14863F4234D51CC5D72F1F4BDB84"
+      "bytes": 55060,
+      "sha256": "6C5B1457E71608B3114C82FCA5355E2CEAE7155E13061AF156757BF77D789486"
     },
     {
       "path": "publication/figure_captions.md",
-      "bytes": 4503,
-      "sha256": "02F8903495C11C9921032DA67AF9E076CBAC40E6B69DCC7D0C9BB355FBC3BAEA"
+      "bytes": 4796,
+      "sha256": "0906AB69BE127A78C8A91B8767C14E93486DC40BB8C15C80BC165F2976523993"
     },
     {
       "path": "publication/methods.md",
-      "bytes": 3263,
-      "sha256": "AE7DF272C442A7C7B34851DF4148AEB23FBAFBEA5B1807B896B9F2382E471250"
+      "bytes": 4214,
+      "sha256": "36D8055EDB62EDAC1067C296599B0709CBA8E4BF7B0A1C55DEC39B5F2B7405E5"
     },
     {
       "path": "publication/results_text.md",
-      "bytes": 879,
-      "sha256": "EC6CCF6C04456E04AB39F48B62A16574A95D886737FF1DFB1EC651E605B030E4"
+      "bytes": 896,
+      "sha256": "62E720C69BD6D943732A55B2005F1D9D8A55D196A67CF7F1B310A4E2E172D6B5"
     },
     {
       "path": "publication/roi_results.csv",
       "bytes": 532,
-      "sha256": "03628038A42E254C48020D3619CC68BD89D9B492C4C8C5BA11C8B595BE3590F1"
+      "sha256": "69B5107AAB488E9F36C2AA3961E266FC206B6FC2C56736600AC8336BF0ACB31B"
     },
     {
       "path": "traceability/parameters.json",
-      "bytes": 7069,
-      "sha256": "743093752650763EEE4733EB9A9625C90335989093F5DF533F3CD524BCE0F757"
+      "bytes": 7134,
+      "sha256": "5649F2DE289CA1970FBC35602C386C24644C27D8A579BD42721F4502A25121D3"
     },
     {
       "path": "traceability/quality_control.json",
-      "bytes": 3988,
-      "sha256": "18DD1B85B9D7DBCA46B3810812FEEFA3590C7B6BAF6EBBB79052097BFBD27D29"
+      "bytes": 4042,
+      "sha256": "050D0F1B5BF2B4735EC9C89DCD4BF35FDF060A2A5F8C43F92F3D90B636DEB770"
     },
     {
       "path": "report.pdf",
-      "bytes": 32677111,
-      "sha256": "157B27F2DDC8FB1BA22B0B3AF11ED91A6ABEE02FBDD7A63571EDDCFA4BEFE619"
+      "bytes": 28964356,
+      "sha256": "378F00BCEC06F772853B74C531124404141655AE5A4881FEC79AC15C5DC836BB"
     },
     {
       "path": "publication_index.json",
-      "bytes": 12240,
-      "sha256": "24CE17DB84B4D6198935F1088D8D2AF674DCDFE53F4F81E15A82DFBD2FA28EC4"
+      "bytes": 12521,
+      "sha256": "169CC4EF2A727A46A802040C2242640E0C6A72F80FDC189812AF5F6141C4D17C"
     }
   ],
   "declared_artifacts": [
@@ -110,8 +110,8 @@
       "purpose": "图件、图注与图表数据的对应关系",
       "delivery_layer": "publication",
       "generated_by_builder": true,
-      "bytes": 12240,
-      "sha256": "24CE17DB84B4D6198935F1088D8D2AF674DCDFE53F4F81E15A82DFBD2FA28EC4"
+      "bytes": 12521,
+      "sha256": "169CC4EF2A727A46A802040C2242640E0C6A72F80FDC189812AF5F6141C4D17C"
     },
     {
       "path": "publication/figure_captions.md",
@@ -119,8 +119,8 @@
       "purpose": "按图号整理的中文图题与图注",
       "delivery_layer": "publication",
       "generated_by_builder": true,
-      "bytes": 4503,
-      "sha256": "02F8903495C11C9921032DA67AF9E076CBAC40E6B69DCC7D0C9BB355FBC3BAEA"
+      "bytes": 4796,
+      "sha256": "0906AB69BE127A78C8A91B8767C14E93486DC40BB8C15C80BC165F2976523993"
     },
     {
       "path": "publication/methods.md",
@@ -128,8 +128,8 @@
       "purpose": "按方法主题整理、保留来源编号的可编辑文本",
       "delivery_layer": "publication",
       "generated_by_builder": true,
-      "bytes": 3263,
-      "sha256": "AE7DF272C442A7C7B34851DF4148AEB23FBAFBEA5B1807B896B9F2382E471250"
+      "bytes": 4214,
+      "sha256": "36D8055EDB62EDAC1067C296599B0709CBA8E4BF7B0A1C55DEC39B5F2B7405E5"
     },
     {
       "path": "publication/results_text.md",
@@ -137,8 +137,8 @@
       "purpose": "与图件和指标对应的结果段落草稿",
       "delivery_layer": "publication",
       "generated_by_builder": true,
-      "bytes": 879,
-      "sha256": "EC6CCF6C04456E04AB39F48B62A16574A95D886737FF1DFB1EC651E605B030E4"
+      "bytes": 896,
+      "sha256": "62E720C69BD6D943732A55B2005F1D9D8A55D196A67CF7F1B310A4E2E172D6B5"
     },
     {
       "path": "publication/roi_results.csv",
@@ -147,7 +147,7 @@
       "delivery_layer": "publication",
       "generated_by_builder": true,
       "bytes": 532,
-      "sha256": "03628038A42E254C48020D3619CC68BD89D9B492C4C8C5BA11C8B595BE3590F1"
+      "sha256": "69B5107AAB488E9F36C2AA3961E266FC206B6FC2C56736600AC8336BF0ACB31B"
     },
     {
       "path": "traceability/parameters.json",
@@ -155,8 +155,8 @@
       "purpose": "软件、模型、电导率与分析方法参数",
       "delivery_layer": "trace",
       "generated_by_builder": true,
-      "bytes": 7069,
-      "sha256": "743093752650763EEE4733EB9A9625C90335989093F5DF533F3CD524BCE0F757"
+      "bytes": 7134,
+      "sha256": "5649F2DE289CA1970FBC35602C386C24644C27D8A579BD42721F4502A25121D3"
     },
     {
       "path": "traceability/quality_control.json",
@@ -164,8 +164,8 @@
       "purpose": "逐项质量检查、依据和未评估内容",
       "delivery_layer": "trace",
       "generated_by_builder": true,
-      "bytes": 3988,
-      "sha256": "18DD1B85B9D7DBCA46B3810812FEEFA3590C7B6BAF6EBBB79052097BFBD27D29"
+      "bytes": 4042,
+      "sha256": "050D0F1B5BF2B4735EC9C89DCD4BF35FDF060A2A5F8C43F92F3D90B636DEB770"
     },
     {
       "path": "standard_manifest.json",
@@ -226,8 +226,8 @@
     },
     {
       "path": "figures/pdf/fig01_stimulation_montage.pdf",
-      "bytes": 445496,
-      "sha256": "B91E6F46871CDB2E60CA18ADA5ED61A240224DB03A97377D345441C368850941"
+      "bytes": 2026438,
+      "sha256": "B7EFEF4410D711B35F0CAC3C7EFEB83AB7A65E0E72B7CDEB60A0EE63ED821BF8"
     },
     {
       "path": "figures/pdf/fig02_individual_anatomy_hippocampus.pdf",
@@ -236,13 +236,13 @@
     },
     {
       "path": "figures/pdf/fig03_carrier_fields_E1_E2.pdf",
-      "bytes": 5785755,
-      "sha256": "437373C509076DCE3FF75DA786355A8A245777E903A3DC5E88E63CB9BDE67527"
+      "bytes": 3824216,
+      "sha256": "3ECDA34F5E6B0084EDB4BDC4454BB415B6DE58FB6BC3603B37E25B03E01069D2"
     },
     {
       "path": "figures/pdf/fig04_TI_1to1_directional_and_TImax.pdf",
-      "bytes": 4856894,
-      "sha256": "326683A16851209C8DFAD865251FAAEFF01980B49668C12B9295C8E1B3584702"
+      "bytes": 3799230,
+      "sha256": "F0957258F63083F636852D086A28C10CD201E9F552DD32FD72AB3CD6276A36C1"
     },
     {
       "path": "figures/pdf/fig07_surface_hotspot_ti_1to1_pv.pdf",
@@ -256,8 +256,8 @@
     },
     {
       "path": "figures/png/fig01_stimulation_montage.png",
-      "bytes": 735323,
-      "sha256": "917F79501B6370D9DB452AE59B637D4DD3F08CEE274DB4314214D99136451318"
+      "bytes": 1898872,
+      "sha256": "29221F4EAF168DAC1E3E9249697171D93993F31B5C4D94C8C7254E8DB58D5B44"
     },
     {
       "path": "figures/png/fig02_individual_anatomy_hippocampus.png",
@@ -266,13 +266,13 @@
     },
     {
       "path": "figures/png/fig03_carrier_fields_E1_E2.png",
-      "bytes": 5215879,
-      "sha256": "BCD29D01E96901E0BDA5CC9A7BF7EC604A05A8376E8339D9905D0EBBFB954110"
+      "bytes": 3390967,
+      "sha256": "A671357D93CC90730B9D454E2C13058F63022E02E48A4E2B7C5B5E8CDCE08F87"
     },
     {
       "path": "figures/png/fig04_TI_1to1_directional_and_TImax.png",
-      "bytes": 4322627,
-      "sha256": "482D47815B423D6156A948BD99B2A99C95FE5B4EECD768DAF2A06B8121FAE775"
+      "bytes": 3377713,
+      "sha256": "FDF148CDC997EF4D451918128512D488836754CBB8601F4CC20DD31E420F8341"
     },
     {
       "path": "figures/png/fig07_surface_hotspot_ti_1to1_pv.png",
@@ -296,8 +296,8 @@
     },
     {
       "path": "figures/svg/fig01_stimulation_montage.svg",
-      "bytes": 780504,
-      "sha256": "9A9CD540500F69C92489F1DF514E65A4DF521D736790265E49EA7C3D65473F8D"
+      "bytes": 2878064,
+      "sha256": "C6ABDC9B0119FF437EE14AAD954DBCDEB0E480452D5C8029AE4C1B6CFD1849D2"
     },
     {
       "path": "figures/svg/fig02_individual_anatomy_hippocampus.svg",
@@ -306,13 +306,13 @@
     },
     {
       "path": "figures/svg/fig03_carrier_fields_E1_E2.svg",
-      "bytes": 8595570,
-      "sha256": "1410B7C2D9617C5DA1A065E97D7CED90FB59EC531F0008B1D784920281D0AB6B"
+      "bytes": 5662364,
+      "sha256": "2BE7C8D5E90D8E19107E8609E5B19BD63B66C195393DBA909003DAEF4C4B23FD"
     },
     {
       "path": "figures/svg/fig04_TI_1to1_directional_and_TImax.svg",
-      "bytes": 7167043,
-      "sha256": "6C2F5E3730DC0D501B593EA3912EF40D660193CA2E0EF9761368C49AF908ADD1"
+      "bytes": 5608004,
+      "sha256": "21B0DEF060E7526489D1C6DA1B78BA317ED8201C81941BAEEB9456CCABC03015"
     },
     {
       "path": "figures/svg/fig07_surface_hotspot_ti_1to1_pv.svg",
@@ -336,28 +336,28 @@
     },
     {
       "path": "publication/figure_captions.md",
-      "bytes": 4503,
-      "sha256": "02F8903495C11C9921032DA67AF9E076CBAC40E6B69DCC7D0C9BB355FBC3BAEA"
+      "bytes": 4796,
+      "sha256": "0906AB69BE127A78C8A91B8767C14E93486DC40BB8C15C80BC165F2976523993"
     },
     {
       "path": "publication/methods.md",
-      "bytes": 3263,
-      "sha256": "AE7DF272C442A7C7B34851DF4148AEB23FBAFBEA5B1807B896B9F2382E471250"
+      "bytes": 4214,
+      "sha256": "36D8055EDB62EDAC1067C296599B0709CBA8E4BF7B0A1C55DEC39B5F2B7405E5"
     },
     {
       "path": "publication/results_text.md",
-      "bytes": 879,
-      "sha256": "EC6CCF6C04456E04AB39F48B62A16574A95D886737FF1DFB1EC651E605B030E4"
+      "bytes": 896,
+      "sha256": "62E720C69BD6D943732A55B2005F1D9D8A55D196A67CF7F1B310A4E2E172D6B5"
     },
     {
       "path": "publication/roi_results.csv",
       "bytes": 532,
-      "sha256": "03628038A42E254C48020D3619CC68BD89D9B492C4C8C5BA11C8B595BE3590F1"
+      "sha256": "69B5107AAB488E9F36C2AA3961E266FC206B6FC2C56736600AC8336BF0ACB31B"
     },
     {
       "path": "publication_index.json",
-      "bytes": 12240,
-      "sha256": "24CE17DB84B4D6198935F1088D8D2AF674DCDFE53F4F81E15A82DFBD2FA28EC4"
+      "bytes": 12521,
+      "sha256": "169CC4EF2A727A46A802040C2242640E0C6A72F80FDC189812AF5F6141C4D17C"
     },
     {
       "path": "raw/ti_example_fields.h5",
@@ -376,13 +376,13 @@
     },
     {
       "path": "report.html",
-      "bytes": 53895,
-      "sha256": "823924C87E46D69BB51C8460D917B239648B14863F4234D51CC5D72F1F4BDB84"
+      "bytes": 55060,
+      "sha256": "6C5B1457E71608B3114C82FCA5355E2CEAE7155E13061AF156757BF77D789486"
     },
     {
       "path": "report.pdf",
-      "bytes": 32677111,
-      "sha256": "157B27F2DDC8FB1BA22B0B3AF11ED91A6ABEE02FBDD7A63571EDDCFA4BEFE619"
+      "bytes": 28964356,
+      "sha256": "378F00BCEC06F772853B74C531124404141655AE5A4881FEC79AC15C5DC836BB"
     },
     {
       "path": "reproducibility/DATA_AND_CODE_AVAILABILITY.md",
@@ -391,8 +391,8 @@
     },
     {
       "path": "standard_report_data.json",
-      "bytes": 34833,
-      "sha256": "3215B0EDED49A293024C764B880C4F880D4172D2CA2DDD31ED0849790DCA2D5E"
+      "bytes": 36077,
+      "sha256": "3C4D97E97644AD31ECA61BE8BAC14FBA2C256486D667D3313210706E9D200C31"
     },
     {
       "path": "tables/simnibs_ti_service_results.xlsx",
@@ -401,13 +401,13 @@
     },
     {
       "path": "traceability/parameters.json",
-      "bytes": 7069,
-      "sha256": "743093752650763EEE4733EB9A9625C90335989093F5DF533F3CD524BCE0F757"
+      "bytes": 7134,
+      "sha256": "5649F2DE289CA1970FBC35602C386C24644C27D8A579BD42721F4502A25121D3"
     },
     {
       "path": "traceability/quality_control.json",
-      "bytes": 3988,
-      "sha256": "18DD1B85B9D7DBCA46B3810812FEEFA3590C7B6BAF6EBBB79052097BFBD27D29"
+      "bytes": 4042,
+      "sha256": "050D0F1B5BF2B4735EC9C89DCD4BF35FDF060A2A5F8C43F92F3D90B636DEB770"
     }
   ]
 }
