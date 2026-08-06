@@ -8,24 +8,24 @@
       "figure_id": "stimulation_montage",
       "category": "protocol",
       "title": "电极位置与两组回路",
-      "reader_question": "电极放在哪里，两组电流如何配对？",
-      "conclusion": "四枚电极构成 FT7-Fp2 与 TP7-TP8 两路刺激回路。",
-      "caption": "圆形和方形分别代表两路电流的正相端与负相端（极性随交流电快速反转）；连线只表示电极配对关系，不代表电流在脑内的路径。绿色为左海马。",
+      "reader_question": "电极放在哪里，如何配成两路回路？",
+      "conclusion": "四枚电极按国际 10-10 系统放置，构成 FT7–Fp2（E1）与 TP7–TP8（E2）两路回路。",
+      "caption": "左（A）：10-10 脑电帽俯视示意图，标出 Fp2、FT7、TP7、TP8 位点及其配对连线；右（B–D）：头模左外侧、前方与上方视图，圆形与方形分别表示两路回路的正相端与负相端。连线只表示电极配对关系，不代表电流在脑内的路径。绿色为左海马。电极直径 20 mm。",
       "assets": {
         "image": {
           "path": "figures/png/fig01_stimulation_montage.png",
-          "bytes": 735323,
-          "sha256": "917F79501B6370D9DB452AE59B637D4DD3F08CEE274DB4314214D99136451318"
+          "bytes": 1898872,
+          "sha256": "29221F4EAF168DAC1E3E9249697171D93993F31B5C4D94C8C7254E8DB58D5B44"
         },
         "vector": {
           "path": "figures/svg/fig01_stimulation_montage.svg",
-          "bytes": 780504,
-          "sha256": "9A9CD540500F69C92489F1DF514E65A4DF521D736790265E49EA7C3D65473F8D"
+          "bytes": 2878064,
+          "sha256": "C6ABDC9B0119FF437EE14AAD954DBCDEB0E480452D5C8029AE4C1B6CFD1849D2"
         },
         "pdf": {
           "path": "figures/pdf/fig01_stimulation_montage.pdf",
-          "bytes": 445496,
-          "sha256": "B91E6F46871CDB2E60CA18ADA5ED61A240224DB03A97377D345441C368850941"
+          "bytes": 2026438,
+          "sha256": "B7EFEF4410D711B35F0CAC3C7EFEB83AB7A65E0E72B7CDEB60A0EE63ED821BF8"
         },
         "source_data": {
           "path": "figures/figure_data/fig01_stimulation_montage.csv",
@@ -39,9 +39,9 @@
       "figure_id": "electrode_topology",
       "category": "protocol",
       "title": "电极配置与电流分配（俯视）",
-      "reader_question": "四个电极如何配对，注入电流的大小与方向如何？",
-      "conclusion": "TI 1:1 时两组回路均为 ±1.0 mA；TI 1:3 时第一组为 ±0.5 mA、第二组为 ±1.5 mA（峰值口径）。",
-      "caption": "头皮俯视图：蓝色表示负相电流、红色表示正相电流，符号大小与电流幅度对应；虚线表示两路载波回路的配对关系。",
+      "reader_question": "两组电流的大小与相位方向如何分配？",
+      "conclusion": "示例方案（TI 1:1，即 E1:E2 = 1:1）两路回路均为 ±1.0 mA；若按 1:3 配置（E1:E2 = 1:3），两路分别为 ±0.5 mA 与 ±1.5 mA（峰值口径）。",
+      "caption": "头皮俯视图：红色为正相电流、蓝色为负相电流，符号大小与电流幅度对应；虚线表示两路回路的配对关系。",
       "assets": {
         "image": {
           "path": "figures/png/fig09_electrode_topology_current.png",
@@ -99,18 +99,18 @@
       "assets": {
         "image": {
           "path": "figures/png/fig03_carrier_fields_E1_E2.png",
-          "bytes": 5215879,
-          "sha256": "BCD29D01E96901E0BDA5CC9A7BF7EC604A05A8376E8339D9905D0EBBFB954110"
+          "bytes": 3390967,
+          "sha256": "A671357D93CC90730B9D454E2C13058F63022E02E48A4E2B7C5B5E8CDCE08F87"
         },
         "vector": {
           "path": "figures/svg/fig03_carrier_fields_E1_E2.svg",
-          "bytes": 8595570,
-          "sha256": "1410B7C2D9617C5DA1A065E97D7CED90FB59EC531F0008B1D784920281D0AB6B"
+          "bytes": 5662364,
+          "sha256": "2BE7C8D5E90D8E19107E8609E5B19BD63B66C195393DBA909003DAEF4C4B23FD"
         },
         "pdf": {
           "path": "figures/pdf/fig03_carrier_fields_E1_E2.pdf",
-          "bytes": 5785755,
-          "sha256": "437373C509076DCE3FF75DA786355A8A245777E903A3DC5E88E63CB9BDE67527"
+          "bytes": 3824216,
+          "sha256": "3ECDA34F5E6B0084EDB4BDC4454BB415B6DE58FB6BC3603B37E25B03E01069D2"
         },
         "source_data": {
           "path": "figures/figure_data/fig03_carrier_fields_E1_E2.csv",
@@ -125,23 +125,23 @@
       "category": "field",
       "title": "示例方案的全脑电场分布",
       "reader_question": "本次方案产生的电场集中在哪里？",
-      "conclusion": "左海马电场中位数 0.070 V/m；海马以外区域也有电场。",
+      "conclusion": "电场主要分布在灰质区域，左海马附近可见较高值，海马以外区域亦有暴露；具体数值见区域统计表。",
       "caption": "上排显示沿神经纤维走向（DTI 主方向，近似）测量的电场，下排显示不限定方向的电场强度（TImax）。三个切面（矢状/冠状/轴位）均经过海马靶点中心（黄色十字与圆圈标记靶点）；色标上限取灰质第 99 百分位，超出按上限颜色显示；空心标记为电极在切面上的投影位置，实色标记为当前行对应的回路，淡色为另一回路。",
       "assets": {
         "image": {
           "path": "figures/png/fig04_TI_1to1_directional_and_TImax.png",
-          "bytes": 4322627,
-          "sha256": "482D47815B423D6156A948BD99B2A99C95FE5B4EECD768DAF2A06B8121FAE775"
+          "bytes": 3377713,
+          "sha256": "FDF148CDC997EF4D451918128512D488836754CBB8601F4CC20DD31E420F8341"
         },
         "vector": {
           "path": "figures/svg/fig04_TI_1to1_directional_and_TImax.svg",
-          "bytes": 7167043,
-          "sha256": "6C2F5E3730DC0D501B593EA3912EF40D660193CA2E0EF9761368C49AF908ADD1"
+          "bytes": 5608004,
+          "sha256": "21B0DEF060E7526489D1C6DA1B78BA317ED8201C81941BAEEB9456CCABC03015"
         },
         "pdf": {
           "path": "figures/pdf/fig04_TI_1to1_directional_and_TImax.pdf",
-          "bytes": 4856894,
-          "sha256": "326683A16851209C8DFAD865251FAAEFF01980B49668C12B9295C8E1B3584702"
+          "bytes": 3799230,
+          "sha256": "F0957258F63083F636852D086A28C10CD201E9F552DD32FD72AB3CD6276A36C1"
         },
         "source_data": {
           "path": "figures/figure_data/fig04_TI_1to1_directional_and_TImax.csv",
