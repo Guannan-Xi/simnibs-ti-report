@@ -57,7 +57,7 @@
       "target_id": "cortex_anterior",
       "name": "前部皮质采样区",
       "role": "off_target_sample",
-      "definition": "以 FT7 电极邻近灰质单元为中心的 10 mm 球形采样区（个体头模型坐标约 −55.8、33.9、9.1 mm），非解剖图谱分区",
+      "definition": "DK40（Desikan–Killiany）图谱左侧颞上回（superior temporal gyrus）：图谱经 SimNIBS 从 fsaverage 映射至个体皮层表面，再按最近邻顶点赋给灰质单元，不再使用球形采样",
       "coordinate_space": "subject"
     },
     {
